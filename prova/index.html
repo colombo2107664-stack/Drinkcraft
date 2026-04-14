@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sito Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f5f7fa;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #333;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Benvenuto nel mio sito</h1>
+  <p>Un semplice esempio HTML + CSS moderno</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Servizi</a>
+  <a href="#">Chi siamo</a>
+  <a href="#">Contatti</a>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <h2>Sezione 1</h2>
+    <p>Questo è un esempio di contenuto. Puoi personalizzarlo come vuoi.</p>
+  </div>
+
+  <div class="card">
+    <h2>Sezione 2</h2>
+    <p>Il design è semplice ma elegante, con effetti hover e layout pulito.</p>
+  </div>
+
+  <div class="card">
+    <h2>Sezione 3</h2>
+    <p>Perfetto come base per un progetto personale o portfolio.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 - Il tuo sito</p>
+</footer>
+
+</body>
+</html>
