@@ -1,0 +1,99 @@
+:root{
+    --sfondo-pagina: #0B1220;
+  --sfondo-pannello: rgba(255, 255, 255, 0.08);
+  --sfondo-pannello-evidenza: rgba(255, 255, 255, 0.12);
+  --sfondo-input: #101826;
+  --sfondo-input-focus: #162235;
+
+  --testo-principale: #F2F7FF;
+  --testo-secondario: #A9B4C7;
+
+  --bordo-leggero: rgba(255,255,255,0.14);
+  --bordo-marcato: rgba(255,255,255,0.24);
+
+  --colore-accento: #FF8A1F;
+  --colore-accento-hover: #FF9D47;
+  --colore-accento-scuro: #E56F00;
+
+  --sfondo-bottone-scuro: #182231;
+  --sfondo-bottone-scuro-hover: #243246;
+}
+
+.sezioneTitolo{
+    margin-top: var(--spazio-lg);
+    height:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sezioneTitolo svg{
+    background-color: var(--sfondo-pannello);
+    border-radius: var(--raggio-lg);
+    height: 100%;
+    width:auto;
+
+    aspect-ratio: 1/1;
+    gap: var(--spazio-lg);
+    fill:none;
+    stroke:#4DD0E1;
+}
+
+.sezioneTitolo h1{
+    padding-top: var(--spazio-sm);
+    color: var(--testo-principale);
+    text-align: center;
+}
+
+.sezioneTitolo h4{
+    color: var(--testo-secondario);
+}
+
+
+
+.SezioneDrink{
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.14);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 98%;
+    margin: var(--spazio-lg);
+    border-radius: var(--raggio-lg);
+    
+    
+}
+
+.postDrink{
+    background-color: #182231;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--spazio-lg);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    padding: var(--spazio-sm);
+}
+.postDrink img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio:1/1;
+    margin: var(--spazio-2xs);
+    border-radius: var(--raggio-lg);
+}
+
+.postDrink p{
+    position: relative;
+    color:#F2F7FF;
+    font-size: clamp(0.95rem, 1.2vw, 1rem);
+    margin: var(--spazio-2xs);
+    width: 100%;
+    text-align: center;
+    
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    padding: var(--spazio-sm);
+}
+
+

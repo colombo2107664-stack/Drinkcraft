@@ -1,0 +1,156 @@
+Queste sono le variabili tema CSS del progetto. Per ciascuna variabile, considera i seguenti possibili utilizzi, così posso scegliere facilmente dove applicarla.
+
+VARIABILI TEMA CSS
+Definite in: CSS/CreaDrink.css e CSS/partecipazionesfida.css
+
+SFONDI
+
+--sfondo-pagina
+Valore: #0B1220
+Possibili utilizzi:
+- background del body
+- sfondo principale di tutta la pagina
+- sfondo delle pagine feed, profilo, login, sfide
+- colore di base dietro card e contenitori
+
+--sfondo-pannello
+Valore: rgba(255, 255, 255, 0.08)
+Possibili utilizzi:
+- sfondo delle card
+- contenitori principali
+- box dei post
+- pannelli delle sezioni
+- riquadri dei form
+- blocchi semitrasparenti
+
+--sfondo-pannello-evidenza
+Valore: rgba(255, 255, 255, 0.12)
+Possibili utilizzi:
+- card più in evidenza
+- box statistiche
+- contenitori selezionati
+- pannelli hover leggeri
+- blocchi che devono staccarsi di più dal resto
+
+--sfondo-input
+Valore: #101826
+Possibili utilizzi:
+- campi input
+- textarea
+- select
+- aree di inserimento testo
+- componenti interattivi scuri nei form
+
+--sfondo-input-focus
+Valore: #162235
+Possibili utilizzi:
+- input attivi
+- input in focus
+- textarea cliccate
+- select aperte o selezionate
+- stato evidenziato di elementi form
+
+TESTI
+
+--testo-principale
+Valore: #F2F7FF
+Possibili utilizzi:
+- titoli principali
+- testo normale
+- testo dentro card scure
+- label importanti
+- testo dei pulsanti
+- testo nella toolbar/navbar
+
+--testo-secondario
+Valore: #A9B4C7
+Possibili utilizzi:
+- sottotitoli
+- descrizioni
+- placeholder
+- testo informativo secondario
+- metadata
+- testo meno importante nelle card o nei form
+
+BORDI
+
+--bordo-leggero
+Valore: rgba(255,255,255,0.14)
+Possibili utilizzi:
+- bordi sottili delle card
+- bordi input
+- divisori discreti
+- separatori interni
+- contorni leggeri dei box
+
+--bordo-marcato
+Valore: rgba(255,255,255,0.24)
+Possibili utilizzi:
+- bordi più visibili
+- bordi di aree upload
+- contenitori in focus
+- riquadri evidenziati
+- stati attivi che richiedono maggiore stacco visivo
+
+ACCENTI
+
+--colore-accento
+Valore: #FF8A1F
+Possibili utilizzi:
+- bottone primario
+- call to action
+- radio button selezionati
+- checkbox attive
+- tab attiva
+- badge importanti
+- elementi che devono attirare l’attenzione
+
+--colore-accento-hover
+Valore: #FF9D47
+Possibili utilizzi:
+- hover dei bottoni principali
+- hover di CTA
+- evidenziazione al passaggio del mouse
+- stato hover di elementi accent
+
+--colore-accento-scuro
+Valore: #E56F00
+Possibili utilizzi:
+- bordo del bottone primario
+- stato pressed del bottone
+- dettaglio più scuro per elementi accent
+- outline di elementi arancioni
+- contrasto aggiuntivo su elementi importanti
+
+BOTTONI SCURI
+
+--sfondo-bottone-scuro
+Valore: #182231
+Possibili utilizzi:
+- bottoni secondari
+- bottoni neutri
+- chip scure
+- box azione secondaria
+- controlli scuri nei pannelli
+
+--sfondo-bottone-scuro-hover
+Valore: #243246
+Possibili utilizzi:
+- hover dei bottoni secondari
+- hover delle chip scure
+- stato attivo di pulsanti neutri
+- evidenziazione leggera di controlli secondari
+
+
+
+
+
+
+Indicazione generale:
+- Usa --sfondo-pagina per la base di tutta l’interfaccia.
+- Usa --sfondo-pannello e --sfondo-pannello-evidenza per costruire i vari livelli visivi dei contenitori.
+- Usa --sfondo-input e --sfondo-input-focus per tutti i controlli dei form.
+- Usa --testo-principale per i contenuti importanti e --testo-secondario per testi di supporto.
+- Usa --bordo-leggero e --bordo-marcato per separazioni e gerarchie visive.
+- Usa le variabili di accento solo per azioni, stati attivi e punti focali.
+- Usa i colori dei bottoni scuri per elementi secondari o neutri.

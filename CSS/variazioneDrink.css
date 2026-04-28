@@ -1,0 +1,404 @@
+:root{
+    --sfondo-pagina: #0B1220;
+    --sfondo-pannello: rgba(255, 255, 255, 0.08);
+    --sfondo-pannello-evidenza: rgba(255, 255, 255, 0.12);
+    --sfondo-input: #101826;
+    --sfondo-input-focus: #162235;
+
+    --testo-principale: #F2F7FF;
+    --testo-secondario: #A9B4C7;
+
+    --bordo-leggero: rgba(255,255,255,0.14);
+    --bordo-marcato: rgba(255,255,255,0.24);
+
+    --colore-accento: #FF8A1F;
+    --colore-accento-hover: #FF9D47;
+    --colore-accento-scuro: #E56F00;
+
+    --sfondo-bottone-scuro: #182231;
+    --sfondo-bottone-scuro-hover: #243246;
+}
+
+
+/* contenitore principale */
+.riquadroSfondo{
+    width:70%;
+    margin-left:15%;
+    text-align: center;
+    
+    padding: var(--spazio-xl) var(--spazio-2xl);
+}
+
+/* parte sopra */
+.sezioneTesto{
+    margin-bottom: var(--spazio-xl);
+}
+
+.riquadroSfondo svg{
+    background-color: var(--sfondo-pannello);
+    border-radius: var(--raggio-lg);
+    height: 15%;
+    gap: var(--spazio-lg);
+    fill:#4DD0E1;
+}
+
+.riquadroSfondo h1{
+    padding-top: var(--spazio-sm);
+    color: var(--testo-principale);
+}
+.nomeVecchio{
+    color: #4DD0E1;
+    text-decoration: none;
+}
+
+.riquadroSfondo h4{
+    color: var(--testo-secondario);
+}
+
+/* form */
+.sezioneForm{   
+    background-color: var(--sfondo-pannello);
+    border: 1px solid var(--bordo-leggero);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    padding: var(--spazio-xl);
+    width: 98%;
+    height: auto;
+    border-radius: var(--raggio-md);
+    margin-top: var(--spazio-2xl);
+    
+    
+    top: 25%;
+    left: 1%;
+    backdrop-filter: blur(8px);
+}
+
+.posForm{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(6, minmax(0, auto));
+    column-gap: var(--spazio-sm);
+    
+}
+
+.campoImmagine{
+    grid-column: 2;
+    grid-row: 1 / 4;
+    display: flex;
+    align-items: stretch;
+}
+
+.spazioImmagine{
+    width: 100%;
+    min-height: clamp(13.75rem, 30vw, 15rem);
+    
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    border: 2px dashed var(--bordo-marcato);
+    border-radius: var(--raggio-lg);
+    padding: var(--spazio-sm);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spazio-sm);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: var(--testo-principale);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.spazioImmagine:hover{
+    border-color: var(--colore-accento);
+    background: rgba(255, 138, 31, 0.10);
+    transform: translateY(-2px);
+}
+
+.spazioImmagine input[type="file"]{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.IconaImm{
+    width: var(--dimensione-icona-badge);
+    height: var(--dimensione-icona-badge);
+    border-radius: 50%;
+    background: var(--sfondo-pannello-evidenza);
+    color: var(--colore-accento);
+    display: grid;
+    place-items: center;
+    font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+    font-weight: bold;
+}
+
+.TestoImm{
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
+    font-weight: 600;
+}
+
+
+
+.campoTesto{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spazio-2xs);
+    padding: var(--spazio-sm);
+    font-size: clamp(0.95rem, 1.2vw, 1rem);
+    font-weight: bold;
+}
+
+input[type=text]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(0.75rem, 1.4vw, 0.8125rem) var(--spazio-md);
+    border-radius: var(--raggio-lg);
+    border: 1px solid var(--bordo-leggero);
+    background-color: var(--sfondo-input);
+    color: var(--testo-principale);
+}
+
+input[type=text]::placeholder{
+    color: var(--testo-secondario);
+    font-size: var(--font-corpo-piccolo);
+}
+
+input[type=text]:focus{
+    outline: none;
+    border-color: var(--colore-accento);
+    background-color: var(--sfondo-input-focus);
+    box-shadow: 0 0 0 3px rgba(255,138,31,0.15);
+    font-size: var(--font-corpo-piccolo);
+}
+
+
+.campoDescrizione{
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spazio-2xs);
+    padding: var(--spazio-sm);
+    font-size: clamp(0.95rem, 1.2vw, 1rem);
+    font-weight: bold;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--altezza-controllo-piccola);
+    border: none;
+    transition: 0.2s ease;
+}
+
+button:hover{
+     background: var(--colore-accento);
+}
+
+
+.Opzionebottone{
+    display: inline-block;
+    padding: var(--spazio-xs) var(--spazio-md);
+    border: 1px solid var(--bordo-leggero);
+    border-radius: var(--raggio-lg);
+    cursor: pointer;
+    background-color: var(--sfondo-bottone-scuro);
+    color: var(--testo-principale);
+    transition: 0.2s ease;
+}
+
+.Opzionebottone:hover{
+    background-color: var(--sfondo-bottone-scuro-hover);
+    border-color: var(--colore-accento);
+}
+
+input[type="radio"]{
+    appearance: none;
+}
+
+input[type="radio"]:checked + .Opzionebottone{
+    background-color: var(--colore-accento);
+    color: var(--testo-principale);
+    border-color: var(--colore-accento-scuro);
+}
+
+.campoIngredienti{
+    grid-column: 1 / -1;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: var(--spazio-2xs);
+    padding: var(--spazio-sm);
+    padding-right: var(--spazio-3xs);
+    font-size: clamp(0.95rem, 1.2vw, 1rem);
+}
+
+.campoIngredienti label{
+    grid-row: 1;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    padding-left: var(--spazio-3xs);
+}
+.campoIngredienti input#Ingredienti{
+    
+    grid-column: 1;
+    grid-row:2;
+}
+
+.campoIngredienti input#quantita{
+    grid-column: 2;
+    grid-row:2;
+}
+
+.campoIngredienti button{
+   grid-column: 3;
+   grid-row:2;
+  
+}
+
+.campoIngredienti button:hover{
+    border-color: var(--colore-accento);
+    transform: translateY(-2px);
+   
+}
+
+
+
+.campoPreparazione{
+    grid-column: 1 / -1;
+    grid-row: 5;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    
+
+    gap: var(--spazio-2xs);
+    padding: var(--spazio-sm);
+    font-size: clamp(0.95rem, 1.2vw, 1rem);
+}
+
+.campoPreparazione label{
+    grid-row: 1;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    padding-left: var(--spazio-3xs);
+}
+.campoPreparazione input{
+    grid-column: 1;
+    grid-row:2;
+}
+
+.campoPreparazione button{
+    grid-column: 2;
+    grid-row:2;
+    height:100%;
+    margin: top 0;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+.AggiungiPass{
+    width: var(--spazio-xl);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+
+    background: var(--sfondo-pannello-evidenza);
+    color: var(--colore-accento);
+    display: grid;
+    place-items: center;
+    font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+    font-weight: bold;
+
+}
+
+.campoPreparazione button:hover{
+    border-color: var(--colore-accento);
+    transform: translateY(-2px);
+   
+}
+
+
+
+
+
+
+/* bottoni alla fine del form*/
+.sezioneForm button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    padding: var(--spazio-sm) var(--spazio-lg);
+    border-radius: var(--raggio-md);
+    background-color: var(--sfondo-bottone-scuro);
+    color: var(--testo-principale);
+    border: 1px solid var(--bordo-leggero);
+    gap:var(--spazio-sm)
+}
+
+.sezioneForm button img{
+    width: clamp(1rem, 2vw, 1.5rem);
+    height:auto;
+    aspect-ratio: 1/1;
+}
+
+
+
+.sezioneForm button:hover{
+    background-color: var(--sfondo-bottone-scuro-hover);
+}
+
+
+
+
+
+
+.sezioneForm img{
+    width: 4%;
+    border-radius: 100px;
+    margin-right: var(--spazio-2xs);
+}
+
+.annulla{
+    background-color: transparent !important;
+    border: 1px solid var(--bordo-leggero) !important;
+    color: var(--testo-secondario) !important;
+    padding: 0px !important;
+}
+
+.annulla:hover{
+    background-color: rgba(255,255,255,0.06) !important;
+    color: var(--testo-principale) !important;
+}
+
+.inviato{
+    background-color: var(--colore-accento) !important;
+    color: var(--testo-principale) !important;
+    padding: 0px !important;
+    border: none !important;
+
+    
+}
+
+
+.inviato:hover{
+    background-color: var(--colore-accento-hover) !important;
+    transform: translateY(-2px);
+}
+

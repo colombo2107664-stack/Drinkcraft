@@ -1,0 +1,115 @@
+:root{
+    --sfondo-pagina: #0B1220;
+    --sfondo-pannello: rgba(255, 255, 255, 0.08);
+    --sfondo-pannello-evidenza: rgba(255, 255, 255, 0.12);
+    --sfondo-input: #101826;
+    --sfondo-input-focus: #162235;
+
+    --testo-principale: #F2F7FF;
+    --testo-secondario: #A9B4C7;
+
+    --bordo-leggero: rgba(255,255,255,0.14);
+    --bordo-marcato: rgba(255,255,255,0.24);
+
+    --colore-accento: #FF8A1F;
+    --colore-accento-hover: #FF9D47;
+    --colore-accento-scuro: #E56F00;
+
+    --sfondo-bottone-scuro: #182231;
+    --sfondo-bottone-scuro-hover: #243246;
+}
+
+
+/* contenitore principale */
+.riquadroSfondo{
+    width:80%;
+    margin-left:10%;
+    text-align: center;
+    
+    padding: var(--spazio-xl) var(--spazio-2xl);
+}
+
+/* parte sopra */
+.sezioneTesto{
+    margin-bottom: var(--spazio-xl);
+}
+
+.riquadroSfondo svg{
+    background-color: var(--sfondo-pannello);
+    border-radius: var(--raggio-lg);
+    height: 10%;
+    gap: var(--spazio-lg);
+    fill:#4DD0E1;
+}
+
+.riquadroSfondo h1{
+    padding-top: var(--spazio-sm);
+    color: var(--testo-principale);
+}
+
+.riquadroSfondo h4{
+    color: var(--testo-secondario);
+}
+
+/* form */
+.sezioneForm{   
+    background-color: var(--sfondo-pannello);
+    border: 1px solid var(--bordo-leggero);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    padding: var(--spazio-xl);
+    width: 98%;
+    height: auto;
+    border-radius: var(--raggio-md);
+    margin-top: var(--spazio-2xl);
+    
+    display:grid;
+    grid-template-rows: 1fr auto;
+    
+    top: 25%;
+    left: 1%;
+    backdrop-filter: blur(8px);
+}
+
+.sezioneRisultati{
+    width:100%;
+    height:auto;
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto;
+    column-gap: var(--spazio-xl);
+    row-gap: var(--spazio-3xl);
+
+    margin-top: var(--spazio-xl);
+}
+
+.risultato{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bordo-marcato);
+    background-color: var(--sfondo-input-focus);
+    border-radius: var(--raggio-md);
+    padding: var(--spazio-md);
+    gap: var(--spazio-md);
+}
+
+.risultato img{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--raggio-sm);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

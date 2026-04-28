@@ -1,0 +1,58 @@
+<html>
+    <html lang="it">
+        <head>
+            <title>Drinkcraft</title>
+            <link rel="icon" type="image/x-icon" href="/Immagini/favicon.ico">
+            <link rel="stylesheet" href="../CSS/generale.css"> 
+            <link rel="stylesheet" href="../CSS/Creaprofilo.css"> 
+        </head>
+        <body>
+            <div class="toolbar">
+                <div class="logo"> <img src="../Immagini/logo.jpeg" alt="logo sito"><p class="titolo">Drinkcraft</p></div>
+                
+                <form class="barraRicerca" action="https://www.google.com/search" method="get">
+                <input type="search" id="ricerca" name="ricerca" placeholder="Cerca ricette o tag..." />
+                </form>
+                
+                <a href="../HTML/Index.html"><button class="bottoneT"><img src="../Immagini/home.png">Feed</button></a>
+                <a href="../HTML/sfideSettimanali.html"><button class="bottoneT"><img src="../Immagini/sfide2.png">Sfide</button></a>
+                <a href="../HTML/creaProfilo.html"><button class="bottoneT"><img src="../Immagini/profilo2.png">Profilo</button></a> 
+            </div>
+            
+        <div class="riquadroSfondo">
+            <div class="sezioneTesto">
+            <img src="../Immagini/profilo.png">    
+            <h1>Registrazione</h1>
+            <h4> Crea il tuo profilo Drinkcraft.</h2>
+            </div>
+
+            <div class="sezioneForm">
+            <form action="/invia" method="post">
+                <div class="campo">
+                <label for="nome"> Nome</label>
+                <input type="text" id="nome" name="nome">
+                </div>
+
+                <div class="campo">
+                <label for="email"> Email</label>
+                <input type="email" id="email" name="email">
+                </div>
+
+                <div class="campo">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                </div>
+                
+                <button class="inviato" type="submit"> <img src="../Immagini/invio.png"> Registrati </button>
+                
+                
+            </form>
+
+            <p> </p>
+            </div>
+        </div>
+            
+        </body>
+
+</html>
+

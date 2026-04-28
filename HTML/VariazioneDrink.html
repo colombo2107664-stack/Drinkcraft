@@ -1,0 +1,97 @@
+<html>
+    <html lang="it">
+        <head>
+            <title>Drinkcraft</title>
+            <link rel="icon" type="image/x-icon" href="/Immagini/favicon.ico">
+            <link rel="stylesheet" href="../CSS/generale.css"> 
+            <link rel="stylesheet" href="../CSS/variazioneDrink.css"> 
+        </head>
+        <body>
+            <div class="toolbar">
+                <div class="logo"> <img src="../Immagini/logo.jpeg" alt="logo sito"><p class="titolo">Drinkcraft</p></div>
+                
+                <form class="barraRicerca" action="https://www.google.com/search" method="get">
+                <input type="search" id="ricerca" name="ricerca" placeholder="Cerca ricette o tag..." />
+                </form>
+                
+                <a href="../HTML/Index.html"><button class="bottoneT"><img src="../Immagini/home.png">Feed</button></a>
+                <a href="../HTML/sfideSettimanali.html"><button class="bottoneT"><img src="../Immagini/sfide2.png">Sfide</button></a>
+                <a href="../HTML/creaProfilo.html"><button class="bottoneT"><img src="../Immagini/profilo2.png">Profilo</button></a> 
+            </div>
+        
+        <div class="riquadroSfondo">
+            <div class="sezioneTesto">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M825.6 460.8c-12.8 0-32 6.4-44.8 12.8l-115.2-108.8c6.4-19.2 12.8-38.4 12.8-57.6 0-64-51.2-121.6-121.6-121.6-64 0-121.6 51.2-121.6 121.6 0 44.8 19.2 76.8 51.2 102.4L409.6 640h-6.4c-25.6 0-51.2 6.4-70.4 19.2L243.2 582.4c6.4-12.8 6.4-19.2 6.4-32 0-51.2-38.4-89.6-89.6-89.6-51.2 0-89.6 38.4-89.6 89.6 0 51.2 38.4 89.6 89.6 89.6 19.2 0 32-6.4 44.8-12.8L294.4 704c-6.4 12.8-12.8 32-12.8 51.2 0 64 51.2 121.6 121.6 121.6 64 0 121.6-51.2 121.6-121.6 0-44.8-19.2-76.8-51.2-102.4l76.8-230.4h6.4c25.6 0 44.8-6.4 64-19.2L736 512c-6.4 12.8-6.4 19.2-6.4 32 0 51.2 38.4 89.6 89.6 89.6 51.2 0 89.6-38.4 89.6-89.6s-32-83.2-83.2-83.2z m-409.6 352c-32 0-57.6-25.6-57.6-57.6s25.6-57.6 57.6-57.6 57.6 25.6 57.6 57.6-25.6 57.6-57.6 57.6z"  
+                            />
+                            </svg>     
+            <h1> Nuova variante </h1>
+
+            <h4>Crea la tua versione di: <a class="nomeVecchio"> Nome del vecchio drink</a> </h4>
+            </div>
+
+            <div class="sezioneForm">
+            <form class= "posForm" action="/invia" method="post">
+                
+                <div class="campoTesto">
+                <label for="nomeDrink"> Nome della tua variante</label>
+                <input type="text" id="nomeDrink" name="NomeDrink" placeholder="Dai un nome al tuo drink..." required > 
+                </div>
+
+                <div class="campoDescrizione">
+                <label for="nomeDrink"> Breve descrizione di cosa hai cambiato</label>
+                <input type="text" id="nomeDrink" name="NomeDrink" placeholder="Scrivi qua le tue modifiche..." required > 
+                </div>
+     
+                <div class="campoImmagine">
+                    <label for="Immagine" class=" spazioImmagine">
+                    <span class="IconaImm"> + </span>
+                    <span class="TestoImm">Carica immagine del drink</span>
+                    <input type="file" id="Immagine" name="Immagine" accept="image/*" required>
+                    </label>
+                    </div>
+ 
+                <div class="campoIngredienti">
+                <label for="Ingredienti"> Ingredienti</label>
+                <label for="quantita">Quantità</label>
+                
+                <input type="text" id="Ingredienti" name="Ingredienti" placeholder="Es. Gin" required> 
+                <input type="text" id="quantita" name="quantita" placeholder="30ml"required > 
+
+                <button type="button" > 
+                    <span class="AggiungiPass"> + </span>  
+                    Aggiungi Ingrediente</button>
+                </div>
+
+
+
+                <div class="campoPreparazione">
+                <label>Preparazione</label>
+                <input type="text" id="Preparazione" name="Preparazione" placeholder="Es. 20 minuti" required>
+
+                <button type="button" > 
+                    <span class="AggiungiPass"> + </span> 
+                    Aggiungi passaggio </button>
+                </div>
+                
+                
+                
+                
+                
+                          
+                
+                <button class="annulla" type="delete"> <img src="../Immagini/Annulla.png"> Annulla </button>
+                <button class="inviato" type="submit"> <img src="../Immagini/iconaAccedi.png"> 
+                            Pubblica Variante</button>
+
+            </form>
+
+            
+        </div>
+        </div>
+        
+            
+        </body>
+
+</html>
+

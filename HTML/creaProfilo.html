@@ -1,0 +1,57 @@
+<html>
+    <html lang="it">
+        <head>
+            <title>Drinkcraft</title>
+            <link rel="icon" type="image/x-icon" href="/Immagini/favicon.ico">
+            <link rel="stylesheet" href="../CSS/generale.css"> 
+            <link rel="stylesheet" href="../CSS/Creaprofilo.css"> 
+        </head>
+        <body>
+            <div class="toolbar">
+                <div class="logo"> <img src="../Immagini/logo.jpeg" alt="logo sito"><p class="titolo">Drinkcraft</p></div>
+                
+                <form class="barraRicerca" action="https://www.google.com/search" method="get">
+                <input type="search" id="ricerca" name="ricerca" placeholder="Cerca ricette o tag..." />
+                </form>
+                
+                <a href="../HTML/Index.html"><button class="bottoneT"><img src="../Immagini/home.png">Feed</button></a>
+                <a href="../HTML/sfideSettimanali.html"><button class="bottoneT"><img src="../Immagini/sfide2.png">Sfide</button></a>
+                <a href="../HTML/creaProfilo.html"><button class="bottoneT"><img src="../Immagini/profilo2.png">Profilo</button></a> 
+            </div>
+
+        <div class="riquadroSfondo">
+            <div class="sezioneTesto">
+            <img class="fotoSopra" src="../Immagini/profilo.png">    
+            <h1>Accedi</h1>
+            <h4>Accedi al tuo profilo Drinkcraft.</h2>
+            </div>
+
+            <div class="sezioneForm">
+    
+            <form>
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="campo">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                
+                <button type="button" class="inviato" onclick="window.location.href='../HTML/PaginaProfilo.html'">
+                    <img src="../Immagini/invio.png" alt=""> Accedi
+                </button>
+                
+                <p class="Crea">
+                    Non hai un account? <a href="RegistrazioneProfilo.html">Registrati</a>
+                </p>
+            </form>
+
+            
+        </div>
+            
+        </body>
+
+</html>
+

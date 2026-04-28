@@ -1,0 +1,354 @@
+a {
+    text-decoration: none;
+}
+
+.introduzione-finale {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    padding: var(--spazio-3xl);
+    margin: var(--spazio-lg) auto;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spazio-md);
+}
+
+.badge {
+  display: flex;
+  background-color: #12474D;
+  align-items: center;
+  
+  width: clamp(180px, 30%, 320px);
+  padding: clamp(10px, 2vw, 16px);
+  margin: clamp(10px, 2vw, 18px);
+
+  border-radius: var(--raggio-md);
+}
+
+.img-badge {
+  height: var(--dimensione-avatar-media);
+  width: var(--dimensione-avatar-media);
+  border-radius: 50%;
+
+  background-color:  transparent;
+}
+
+/*POST*/
+.post{
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #F2F7FF;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--raggio-lg);
+  margin: var(--spazio-lg) auto;
+  width: 98%;
+  height: auto;
+
+  display:grid;
+  grid-template-columns: clamp(350px, 28vw, 450px) minmax(0, 1fr);
+  align-items: flex-start;
+}
+.sezionesinistra{
+  display:flex;
+  flex-direction: column;
+  gap: var(--spazio-md);
+}
+.sezionesinistra h1 {
+  margin: var(--spazio-lg);
+  gap: var(--spazio-sm);
+}
+
+.ImgRicetta{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius:var(--raggio-md);
+}
+
+.ImgRicetta img{
+  border: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  padding: var(--spazio-md);
+  border-radius: var(--raggio-lg);
+}
+
+.sezionedestra{
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background-color:#182231;
+  padding: var(--spazio-lg);
+  border-radius: var(--raggio-lg);
+  gap: var(--spazio-md);
+  margin: var(--spazio-md) var(--spazio-md) var(--spazio-md) 0;
+}
+
+.sezioneGuida{
+  background-color: transparent;
+  color: #F2F7FF;
+  border: none;
+  border-radius: var(--raggio-lg);
+  width: 100%;
+  
+  grid-column: 2;
+  grid-row: 1; 
+}
+
+.SezRecensione{
+  grid-column: 1 / -1;
+  background-color: transparent;
+  color: #F2F7FF;
+  border: none;
+  border-radius: var(--raggio-lg);
+  width: min(680px, 50vw);
+  max-width: calc(100% - var(--spazio-xl));
+  background-color:#12474D;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spazio-md);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: var(--spazio-md) var(--spazio-lg);
+  margin: 0 auto var(--spazio-md);
+  text-align: center;
+}
+
+.Drink{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 65%;
+
+}
+
+.profilo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spazio-md);
+}
+
+.Fotoprofilo{
+  height: var(--dimensione-avatar-media);
+  width: var(--dimensione-avatar-media);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dati-tempo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.ingredienti-box{
+  border-radius: var(--raggio-md);
+}
+
+.titoletti {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titoletti h3{
+  margin: var(--spazio-lg) var(--spazio-sm);
+  margin-top: var(--spazio-3xl);
+  color: #4DD0E1;
+}
+
+.titoletti span{
+  margin-top: var(--spazio-xl);
+  border: 1px solid rgba(255,255,255,0.24);
+  color: #4DD0E1;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: var(--raggio-lg);
+  padding:  var(--spazio-3xs) var(--spazio-sm);
+}
+
+.ingredienti{
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spazio-xs);
+}
+
+.ingredienti li{
+  border-radius: var(--raggio-md);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spazio-sm) var(--spazio-xs);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.nome{
+  color:#F2F7FF;
+  font-size: var(--font-corpo);
+}
+
+.quantita{
+  color:#4DD0E1;
+  font-size: var(--font-corpo);
+}
+
+.preparazione-box{
+  border-radius: var(--raggio-md);
+}
+
+.preparazione-box h3{
+  margin: var(--spazio-lg) var(--spazio-sm);
+  color: #4DD0E1;
+}
+
+.preparazione{
+  padding-left: var(--spazio-xl);
+  margin: var(--spazio-lg) 0;
+}
+
+.preparazione li{
+  color:#F2F7FF;
+  font-size: var(--font-corpo);
+  margin-bottom: var(--spazio-xs);
+}
+
+.preparazione li::marker{
+  color:#4DD0E1;
+  font-weight: 600;
+}
+
+.extra{
+  margin-left: var(--spazio-xl);
+  font-size: var(--font-corpo-piccolo);
+}
+
+.azione {
+  display: flex;
+  align-items: center;
+  gap: var(--spazio-2xs);
+
+  font-size: var(--font-corpo);
+  color: #F2F7FF;
+}
+
+.icon{
+  width: var(--dimensione-icona-piccola);
+  height: var(--dimensione-icona-piccola);
+  fill: none;
+  stroke: #A9B4C7;
+  stroke-width: 1.6;
+}
+
+.sinistra {
+  display: flex;
+  align-items: center;
+  gap: var(--spazio-sm);
+  margin-left: var(--spazio-lg);
+}
+
+.centro {
+  display: flex;
+  align-items: center;
+  gap: var(--spazio-xl);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 0;
+}
+
+.difficolta {
+  border: 1px solid #F2F7FF;
+  padding: var(--spazio-2xs);
+  margin-right: 0;
+  border-radius: var(--raggio-lg);
+}
+
+.partecipa-bottone {
+    background-color: transparent;
+    color: #F2F7FF;
+    border: 0.0625rem solid rgba(255,255,255,0.14);
+    border-radius: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.partecipa-bottone:hover {
+    background-color: #E56F00;
+}
+
+
+@media (max-width: 800px) {
+
+  .post{
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    height: auto;
+  }
+
+  /* Il titolo resta sempre in alto */
+  .sezionesinistra{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .sezionesinistra h1{
+    margin-bottom: var(--spazio-sm);
+    text-align: center;
+  }
+
+  /* Immagine subito sotto il titolo */
+  .ImgRicetta{
+    order: 2;
+  }
+
+  .ImgRicetta img{
+    aspect-ratio: 1/1;
+    padding: 0;
+  }
+
+  /* Testo sotto l’immagine */
+  .sezionedestra{
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+
+  .ingredienti{
+    grid-template-columns: 1fr;
+  }
+
+  .SezRecensione{
+    gap: var(--spazio-sm);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .post h1{
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .post p,
+  .preparazione li,
+  .nome,
+  .quantita{
+    font-size: clamp(0.95rem, 3.2vw, 1rem);
+  }
+
+  .post{
+    padding: clamp(12px, 4vw, 18px);
+  }
+
+}
