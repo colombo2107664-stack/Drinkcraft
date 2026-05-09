@@ -1,0 +1,48 @@
+<?php 
+    require __DIR__ ."/../ElementiCondivisi/IndicePagine.php";
+    $TitoloPagina="Cerca...";
+    $StilePagina= $stile["ricerca"];
+?>
+
+<!DOCTYPE html>
+<html lang="it">
+    <?php require_once __DIR__ . "/../" . $elementiCondivisi["head"];?>
+        <body>
+            <?php require_once __DIR__ . "/../" . $elementiCondivisi["navbar"];?>
+            
+        
+        <div class="riquadroSfondo">
+            <div class="sezioneTesto">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <path d="M640 576l192 192c12.8 12.8 12.8 32 0 44.8s-32 12.8-44.8 0L595.2 620.8c-44.8 32-102.4 51.2-160 51.2-147.2 0-268.8-121.6-268.8-268.8S288 134.4 435.2 134.4 704 256 704 403.2c0 57.6-19.2 115.2-51.2 160zM435.2 198.4c-115.2 0-204.8 89.6-204.8 204.8s89.6 204.8 204.8 204.8 204.8-89.6 204.8-204.8-89.6-204.8-204.8-204.8z"/>
+            </svg>
+    
+            <h1> Inizia la tua ricerca  </h1>
+
+            <h4> Cerca drink per nome, ingrediente, autore o tag </h4>
+            </div>
+
+            <div class="sezioneForm">
+                <form class="barraRicerca" action="https://www.google.com/search" method="get">
+                <input type="search" id="ricerca" name="ricerca" placeholder="Cerca ricette o tag..." />
+                </form>
+            <div class="sezioneRisultati">
+                <div class="risultato"><img src="../Immagini/Fiussss.jpg">risultato 1</div>
+                <div class="risultato"><img src="../Immagini/Fiussss.jpg">risultato 2</div>
+                <div class="risultato"><img src="../Immagini/Fiussss.jpg">risultato 3</div>
+                <div class="risultato"><img src="../Immagini/Fiussss.jpg">risultato 4</div>
+                <div class="risultato"><img src="../Immagini/Fiussss.jpg">risultato 5</div>
+
+
+            </div>
+            
+
+            
+        </div>
+        </div>
+        
+            
+        </body>
+
+</html>
+

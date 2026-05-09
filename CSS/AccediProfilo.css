@@ -1,15 +1,8 @@
 
 .riquadroSfondo{
-    position:fixed;
-    left: 50%;
-    top:10%;
-    transform: translateX(-50%);
+    left: 25%;
     
-
-    color:#F2F7FF;
     width: 50%;
-    height: 60%;
-    
 
     text-align: center;
     padding: var(--spazio-xl) var(--spazio-2xl);
@@ -28,13 +21,16 @@
     font-size: clamp(2rem, 5vw, 3rem);
     padding-top: var(--spazio-lg);     
 }
-
-.sezioneTesto{
-   gap:var(--spazio-3xl);
+.riquadroSfondo h4{
+    padding-bottom: var(--spazio-lg);     
 }
 
+
+
 .sezioneForm{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--spazio-lg);
     
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255,255,255,0.14);
@@ -88,7 +84,7 @@
 
 
 .crea{
-    margin-top: var(--spazio-lg);
+    padding: var(--spazio-2xl);
     font-size: clamp(0.95rem, 1.2vw, 1rem);
 }
 

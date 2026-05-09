@@ -1,0 +1,167 @@
+<?php 
+    require __DIR__ ."/../ElementiCondivisi/IndicePagine.php";
+    $TitoloPagina=" Sfide Drinkcraft";
+    $StilePagina= $stile["sfideSettimanali"];
+?>
+
+<!DOCTYPE html>
+<html lang="it">
+    <?php require_once __DIR__ . "/../" . $elementiCondivisi["head"];?>
+        <body>
+            <?php require_once __DIR__ . "/../" . $elementiCondivisi["navbar"];?>
+            
+
+            <div class="sfidesettimanali">
+                <div class="sfide-scritte">
+                    <h1>Sfide Settimanali</h1>
+                <p>Partecipa alle challenge tematiche e vinci badge esclusivi per il tuo profilo</p>
+                </div>     
+            </div>
+
+            <div class="postsfida">
+                <div class="Sezsinistra">
+                    <h1>Primavera Mediterranea</h1>
+                    <p>Crea un drink che celebri i sapori fresschi del Mediterraneo usando almeno un agrume e un erba aromatica</p>
+
+                    <div class="barra-sfida">
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Calendario.png" alt="calendario" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Scadenza</h4>
+                                <span class="valore">15 Apr</span>
+                            </div>
+                        </div>
+
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Partecipanti.png" alt="partecipanti" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Partecipanti</h4>
+                                <span class="valore">127</span>
+                            </div>
+                        </div>
+
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Premio.png" alt="calendario" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Ricompensa</h4>
+                                <span class="valore">Badge esclusivo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="finale">
+                        <div class="badge">
+                            <img src="../Immagini/mediterraneo.png" alt="mediterraneo" class="img-badge">
+                            <h4 class="titbadge">Maestro Mediterraneo</h4>
+                        </div>
+                        <div class="bottoni">
+                            <a href="<?= $pagine['partecipazionesfida'] ?>"><button class="bottoniF">Partecipa Ora</button></a>
+                            <a href="<?= $pagine['Propostesfide'] ?>"><button class="bottoniF">Vedi Proposte</button></a>
+                        </div>     
+                    </div>
+                </div>
+
+                <div class="Sezdestra">
+                    <img src="../Immagini/PrimaveraMediterranea.png" alt="PrimaveraMediterranea" class="imgsfida">
+                </div>
+            </div>
+
+            <div class="postsfida">
+                <div class="Sezsinistra">
+                    <h1>Zero Alcool, Massimo Gusto</h1>
+                    <p>Sfida la creatività con un mocktail analcolico che sorprenda per complessità e presentazione</p>
+
+                    <div class="barra-sfida">
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Calendario.png" alt="calendario" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Scadenza</h4>
+                                <span class="valore">22 Apr</span>
+                            </div>
+                        </div>
+
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Partecipanti.png" alt="partecipanti" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Partecipanti</h4>
+                                <span class="valore">89</span>
+                            </div>
+                        </div>
+
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Premio.png" alt="calendario" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Ricompensa</h4>
+                                <span class="valore">Badge esclusivo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="finale">
+                        <div class="badge">
+                            <img src="../Immagini/no_alcool.png" alt="Analcolico" class="img-badge">
+                            <h4 class="titbadge">Maestro Analcolico</h4>
+                        </div>
+                        <div class="bottoni">
+                            <a href="<?= $pagine['partecipazionesfida'] ?>"><button class="bottoniF">Partecipa Ora</button></a>
+                            <a href="<?= $pagine['Propostesfide'] ?>"><button class="bottoniF">Vedi Proposte</button></a>
+                        </div>     
+                    </div>
+                </div>
+
+                <div class="Sezdestra">
+                    <img src="../Immagini/Analcolicosfida.png" alt="Analcolico" class="imgsfida">
+                </div>
+            </div>
+
+            <div class="postsfida">
+                <div class="Sezsinistra">
+                    <h1>Vintage Revival</h1>
+                    <p>Reinterpreta un classico degli anni '50-'60 con un tocco moderno e sorprendente</p>
+
+                    <div class="barra-sfida">
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Calendario.png" alt="calendario" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Scadenza</h4>
+                                <span class="valore">29 Apr</span>
+                            </div>
+                        </div>
+
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Partecipanti.png" alt="partecipanti" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Partecipanti</h4>
+                                <span class="valore">156</span>
+                            </div>
+                        </div>
+
+                        <div class="oggetto-barra">
+                            <img src="../Immagini/Premio.png" alt="calendario" class="img-tonda">
+                            <div class="scritte">
+                                <h4 class="Titolo">Ricompensa</h4>
+                                <span class="valore">Badge esclusivo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="finale">
+                        <div class="badge">
+                            <img src="../Immagini/vintage.png" alt="Vintage_Master" class="img-badge">
+                            <h4 class="titbadge">Vintage Master</h4>
+                        </div>
+                        <div class="bottoni">
+                            <a href="<?= $pagine['partecipazionesfida'] ?>"><button class="bottoniF">Partecipa Ora</button></a>
+                            <a href="<?= $pagine['Propostesfide'] ?>"><button class="bottoniF">Vedi Proposte</button></a>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="Sezdestra">
+                    <img src="../Immagini/Vintagesfida.png" alt="SfidaVintage" class="imgsfida">
+                </div>
+            </div>
+
+
+        </body>
+</html>

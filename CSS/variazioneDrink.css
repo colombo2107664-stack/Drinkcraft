@@ -37,7 +37,7 @@
 .riquadroSfondo svg{
     background-color: var(--sfondo-pannello);
     border-radius: var(--raggio-lg);
-    height: 15%;
+    height:var(--altezza-minima-toolbar);
     gap: var(--spazio-lg);
     fill:#4DD0E1;
 }
