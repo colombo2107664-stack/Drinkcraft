@@ -310,7 +310,7 @@
     
 }
 
-.PostDrink{
+.postDrink{
     background-color: #182231;
     display:flex;
     flex-direction: column;
@@ -320,7 +320,7 @@
     border-radius: var(--raggio-lg);
     padding: var(--spazio-sm);
 }
-.PostDrink img{
+.postDrink img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -329,7 +329,7 @@
     border-radius: var(--raggio-lg);
 }
 
-.PostDrink p{
+.postDrink p{
     position: relative;
     color:#F2F7FF;
     font-size: clamp(0.95rem, 1.2vw, 1rem);

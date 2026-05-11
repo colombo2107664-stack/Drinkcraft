@@ -5,7 +5,7 @@ $pagine = [
     "creaDrink"             => "/PagineDinamiche/creaDrink.php",
     "CreaProfilo"           => "/PagineDinamiche/CreaProfilo.php",
     "Creaprofilo2"          => "/PagineDinamiche/Creaprofilo2.php",
-    "drink"                 => "/PagineDinamiche/drink.php",
+    "SingoloDrink"                 => "/PagineDinamiche/SingoloDrink.php",
     "index"                 => "/PagineDinamiche/index.php",
     "IndicePagine"          => "/PagineDinamiche/IndicePagine.php",
     "PaginaProfilo"         => "/PagineDinamiche/PaginaProfilo.php",
@@ -19,9 +19,10 @@ $pagine = [
 
 $elementiCondivisi = [
     "head"                  => "/ElementiCondivisi/head.php",
-    "navbar"                => "/ElementiCondivisi/navbar.php"
+    "navbar"                => "/ElementiCondivisi/navbar.php",
+    "drink"                 => "/ElementiCondivisi/drink.php",
+    "sfide"                 => "/ElementiCondivisi/sfide.php"
 ];
-
 
 $stile = [
     "AccediProfilo"         => "../CSS/AccediProfilo.css",

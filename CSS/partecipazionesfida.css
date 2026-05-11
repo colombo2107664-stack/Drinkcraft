@@ -16,6 +16,9 @@ a {
     display: flex;
     align-items: center;
     padding: 0.625rem 1.25rem;
+    font-size: var(--font-corpo);
+    border: 1px solid var(--testo-principale);
+    border-radius:var(raggio-md);
 }
 
 .icon{

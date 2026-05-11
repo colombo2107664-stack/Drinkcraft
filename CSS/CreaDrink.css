@@ -37,11 +37,12 @@
     margin-bottom: var(--spazio-xl);
 }
 
-.riquadroSfondo img{
+.sezioneTesto img{
     background-color: var(--sfondo-pannello);
     border-radius: var(--raggio-lg);
-    height: 15%;
-    gap: var(--spazio-lg);
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .riquadroSfondo h1{

@@ -35,7 +35,7 @@
                 <input type="password" id="password" name="password">
                 </div>
                 
-                <a href="<?= $pagine['CreaProfilo2'] ?>" ><button class="inviato"> <img src="../Immagini/invio.png"> Avanti </button> </a>
+                <a href="<?= $pagine['Creaprofilo2'] ?>" ><button class="inviato"> <img src="../Immagini/invio.png"> Avanti </button> </a>
                 
                 
             </form>

@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="bottoni">
-                    <a href="<?= $pagine['variazioneDrink'] ?>"><button class="creavariante">Crea una variante</button></a>
+                    <a href="<?= $pagine['VariazioneDrink'] ?>"><button class="creavariante">Crea una variante</button></a>
                     <button class="salva">Salva</button>
                 </div>
             </div>
