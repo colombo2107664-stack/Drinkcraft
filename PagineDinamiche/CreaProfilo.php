@@ -19,7 +19,7 @@
             </div>
 
             <div class="sezioneForm">
-            <form action="/invia" method="post">
+            <form action="<?= $pagine['Creaprofilo2'] ?>" method="post">
                 <div class="campo">
                 <label for="nome"> Nome</label>
                 <input type="text" id="nome" name="nome">
@@ -35,7 +35,7 @@
                 <input type="password" id="password" name="password">
                 </div>
                 
-                <a href="<?= $pagine['Creaprofilo2'] ?>" ><button class="inviato"> <img src="../Immagini/invio.png"> Avanti </button> </a>
+                <button class="inviato"> <img src="../Immagini/invio.png"> Avanti </button> 
                 
                 
             </form>

@@ -127,5 +127,13 @@ class Sfida {
             </div>
         </div>';
     }
+
+    // METODO PER CREARE IL POST DELLA SFIDA
+    public function creaPremioOttenuto(): string{
+        return 
+                '<div class="singoloPremio"> <img class="immPremio" src="' . htmlspecialchars($this->getBadgeImg()). '"> <div class="testoPremio"> ' . htmlspecialchars($this->getBadgeNome()). '</div></div>';
+                
+                        
+}
 }
 ?>

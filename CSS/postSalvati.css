@@ -48,6 +48,32 @@
 }
 
 
+.indietro {
+    margin: 1.25rem;
+    color: #F2F7FF;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    font-size: var(--font-corpo);
+    border: 1px solid var(--testo-principale);
+    border-radius:var(--raggio-md);
+    position: absolute;
+    
+    background-color: var(--colore-accento);
+    color: var(--testo-principale);
+    border-radius:var(--raggio-lg);
+    font-size:var(--font-corpo-piccolo);
+}
+.indietro:hover{
+    background-color: var(--colore-accento-hover);
+    transform: translateY(-2px); 
+}
+
+.icon{
+    width:1.35em;
+    height: 1.35em;
+}
+
 
 .SezioneDrink{
     background-color: rgba(255, 255, 255, 0.08);

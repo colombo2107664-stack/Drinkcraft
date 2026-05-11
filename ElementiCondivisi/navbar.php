@@ -3,7 +3,7 @@
                 <nav class="toolbar">
                 <div class="logo"> <img src="../Immagini/logo.jpeg" alt="logo sito"><p class="titolo">Drinkcraft</p></div>
                 
-                <form class="barraRicerca" action="https://www.google.com/search" method="get">
+                <form class="barraRicerca" action="<?= $pagine['ricerca'] ?>" method="get">
                 <input type="search" id="ricerca" name="ricerca" placeholder="Cerca ricette o tag..." />
                 </form>
                 

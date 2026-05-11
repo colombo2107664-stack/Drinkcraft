@@ -19,7 +19,7 @@
             </div>
 
             <div class="sezioneForm">
-            <form class= "posForm" action="/invia" method="post">
+            <form class= "posForm" action="<?= $pagine['PaginaProfilo'] ?>" method="post">
                 
                 <div class="campoTesto">
                     
