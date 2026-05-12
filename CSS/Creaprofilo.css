@@ -74,6 +74,9 @@
     border-radius: 100px;
     margin-right: var(--spazio-2xs);
 }
+.inviato svg{
+    margin-left: var(--spazio-3xl);
+}
 
 .inviato:hover{
     background-color:#FF9D47;

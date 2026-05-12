@@ -292,12 +292,10 @@
             <?php require_once __DIR__ . "/../" . $elementiCondivisi["navbar"];?>
             
             
-            <a href="<?= $pagine['PaginaProfilo'] ?>"><button class="indietro"><img src="../Immagini/Indietro.png" alt="indietro" class="icon">Indietro</button></a>
+            <a href="<?= $pagine['PaginaProfilo'] ?>"><button class="indietro"><svg class = "icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo2-icon lucide-undo-2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg>Indietro</button></a>
 
             <div class="sezioneTitolo">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 3h12v18l-6-4-6 4z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark-icon lucide-bookmark"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
   
             <h1>I miei drink salvati</h1>
             <h4>Trova i tuoi cocktail preferiti sempre a portata di mano</h4>

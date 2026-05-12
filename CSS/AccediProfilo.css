@@ -13,8 +13,8 @@
 }
 .fotoSopra{
     background-color:#12474D;
-    border-radius: var(--raggio-lg);
-    gap: var(--spazio-lg);
+    border-radius: var(--raggio-sm);
+    gap: var(--spazio-md);
 }
 
 .riquadroSfondo h1{
@@ -30,10 +30,10 @@
 .sezioneForm{
     display: flex;
     flex-direction: column;
-    
+    column-gap: var(--spazio-sm);
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255,255,255,0.14);
-    padding: var(--spazio-xl);
+    padding: var(--spazio-lg);
     width: 80%;
     max-width: 500px;
     height:auto;
@@ -74,6 +74,9 @@
     margin-right: var(--spazio-2xs);
 }
 
+.inviato svg{
+    margin-left: var(--spazio-xl);
+}
 .inviato:hover{
     background-color:#FF9D47;
     transform: translateY(-2px);
@@ -83,9 +86,14 @@
 .crea{
     padding: var(--spazio-2xl);
     font-size: clamp(0.95rem, 1.2vw, 1rem);
+    padding: var(--spazio-md);
 }
 
-.crea a{
+.Crea a:link,
+.Crea a:visited,
+.Crea a:hover,
+.Crea a:active{
     color: #4DD0E1;
     text-decoration: none;
+    
 }

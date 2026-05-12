@@ -33,6 +33,7 @@ a {
 .icon{
     width:1.35em;
     height: 1.35em;
+    margin-right: var(--spazio-2xs);
 }
 
 .sfida {
@@ -91,9 +92,7 @@ a {
 .img-tonda {
   height: clamp(2.25rem, 5vw, 3.125rem);
   width: clamp(2.25rem, 5vw, 3.125rem);
-  border-radius: 50%;
-
-  background-color:  #101826;
+  
 }
 
 .scritte {

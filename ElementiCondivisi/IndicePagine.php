@@ -40,4 +40,10 @@ $stile = [
     "VariazioneDrink"       => "/CSS/variazioneDrink.css"
 ];
 
+
+
+$JS = [
+    "form"                  => "../JS/form.js",
+
+]
 ?>

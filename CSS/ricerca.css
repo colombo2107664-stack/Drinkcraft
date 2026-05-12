@@ -39,7 +39,7 @@
     border-radius: var(--raggio-lg);
     height: 10%;
     gap: var(--spazio-lg);
-    fill:#4DD0E1;
+    
 }
 
 .riquadroSfondo h1{
