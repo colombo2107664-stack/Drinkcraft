@@ -3,6 +3,7 @@
 body{
     background: linear-gradient(180deg, #08111D 0%, #0B1220 45%, #101A2A 100%);
     color: var(--testo-principale);
+    padding-top:0vh !important;
 }
 
 a {
@@ -11,16 +12,28 @@ a {
 
 .indietro {
     margin: 1.25rem;
-    background-color: transparent;
     color: #F2F7FF;
     display: flex;
     align-items: center;
     padding: 0.625rem 1.25rem;
+    font-size: var(--font-corpo);
+    border: 1px solid var(--testo-principale);
+    border-radius:var(--raggio-md);
+    
+    background-color: var(--colore-accento);
+    color: var(--testo-principale);
+    border-radius:var(--raggio-lg);
+    font-size:var(--font-corpo-piccolo);
+}
+.indietro:hover{
+    background-color: var(--colore-accento-hover);
+    transform: translateY(-2px); 
 }
 
 .icon{
     width:1.35em;
     height: 1.35em;
+    margin-right: var(--spazio-2xs);
 }
 
 .sfida {
@@ -79,9 +92,7 @@ a {
 .img-tonda {
   height: clamp(2.25rem, 5vw, 3.125rem);
   width: clamp(2.25rem, 5vw, 3.125rem);
-  border-radius: 50%;
-
-  background-color:  #101826;
+  
 }
 
 .scritte {

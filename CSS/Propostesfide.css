@@ -148,6 +148,9 @@ a {
   align-items: center;
 
 }
+.dati-tempo svg{
+  margin-right:var(--spazio-xs);
+}
 
 .ingredienti-box{
   border-radius: var(--raggio-md);

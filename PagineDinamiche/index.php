@@ -1,7 +1,287 @@
 <?php 
     require __DIR__ ."/../ElementiCondivisi/IndicePagine.php";
+    include __DIR__ . "/../" . $elementiCondivisi["drink"];
     $TitoloPagina=" HomePage Drinkcraft";
     $StilePagina= $stile["index"];
+
+
+    $Post=[
+                // Negroni
+                $negroni = new Drink(
+                                    //NOME
+                                    'Negroni',
+                                    //TIPO
+                                    'Alcolico',
+                                    //IMMAGINE
+                                    '/Immagini/negroni.png',
+                                    //INGREDIENTI
+                                    [
+                                        ['nome' => 'Gin', 'quantita' => '30 ml'],
+                                        ['nome' => 'Campari bitter', 'quantita' => '30 ml'],
+                                        ['nome' => 'Vermouth rosso', 'quantita' => '30 ml'],
+                                        ['nome' => 'Arancia', 'quantita' => '1 fetta']
+                                    ],
+                                    //PREPARAZIONE
+                                    [
+                                        'Versare i 30ml di Campari bitter',
+                                        'Aggiungere i 30 ml di Vermouth rosso',
+                                        'Aggiungere i 30ml di Gin',
+                                        'Mescolare il Negroni',
+                                        'Guarnire con la fetta di arancia'
+                                    ],
+                                    //RECENSIONE
+                                    [
+                                        'foto' => '/Immagini/Fiussss.jpg',
+                                        'nome' => 'Fius Gamer',
+                                        'tempo_icon' => '/Immagini/recenti2.png',
+                                        'tempo' => '6g fa'
+                                    ],
+                                    //AZIONI
+                                    [
+                                        //LIKE
+                                        [
+                                            'svg' => 'M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z',
+                                            'numero' => 0,
+                                            'label' => ''
+                                        ],
+                                        //COMMENTI
+                                        [
+                                            'svg' => 'M21 6h-18v12h4v4l4-4h10z',
+                                            'numero' => 0,
+                                            'label' => ''
+                                        ],
+                                        //VARIAZIONI
+                                        [
+                                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
+                                            'numero' => 12,
+                                            'label' => 'varianti'
+                                        ]
+                                    ],
+                                    //DIFFICOLTA
+                                    'Facile'
+                                ),
+                                
+            
+                // Virgin Mojito
+                $virginMojito = new Drink(
+                    //NOME
+                    'Virgin Mojito',
+                    //TIPO
+                    'Analcolico',
+                    //IMMAGINE
+                    '/Immagini/virginmojito.png',
+                    //INGREDIENTI
+                    [
+                        ['nome' => 'Lime', 'quantita' => '1/2'],
+                        ['nome' => 'Menta fresca', 'quantita' => '8 foglie'],
+                        ['nome' => 'Zucchero di canna', 'quantita' => '2 cucchiaini'],
+                        ['nome' => 'Soda', 'quantita' => '100 ml'],
+                        ['nome' => 'Ghiaccio', 'quantita' => 'q.b.']
+                    ],
+                    //PREPARAZIONE
+                    [
+                        'Mettere il lime tagliato a pezzi e lo zucchero nel bicchiere',
+                        'Pestare delicatamente insieme alle foglie di menta',
+                        'Aggiungere il ghiaccio',
+                        'Versare la soda',
+                        'Mescolare e servire ben freddo'
+                    ],
+                    //RECENSIONE
+                    [
+                        'foto' => '/Immagini/profilo5.jpg',
+                        'nome' => 'Giulia FreshMix',
+                        'tempo_icon' => '/Immagini/recenti2.png',
+                        'tempo' => '8h fa'
+                    ],
+                    //AZIONI
+                    [
+                        //LIKE
+                        [
+                            'svg' => 'M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z',
+                            'numero' => 255,
+                            'label' => ''
+                        ],
+                        //COMMENTI
+                        [
+                            'svg' => 'M21 6h-18v12h4v4l4-4h10z',
+                            'numero' => 17,
+                            'label' => ''
+                        ],
+                        //VARIAZIONI
+                        [
+                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
+                            'numero' => 6,
+                            'label' => 'varianti'
+                        ]
+                    ],
+                    //DIFFICOLTA
+                    'Facile'
+                ),
+                // Piña Colada
+                $pinacolada = new Drink(
+                    //NOME
+                    'Piña Colada',
+                    //TIPO
+                    'Alcolico',
+                    //IMMAGINE
+                    '/Immagini/pinacolada.png',
+                    //INGREDIENTI
+                    [
+                        ['nome' => 'Rum bianco', 'quantita' => '50 ml'],
+                        ['nome' => 'Crema di cocco', 'quantita' => '50 ml'],
+                        ['nome' => 'Succo d\'ananas', 'quantita' => '100 ml'],
+                        ['nome' => 'Ghiaccio', 'quantita' => 'q.b.'],
+                        ['nome' => 'Ananas', 'quantita' => '1 fetta']
+                    ],
+                    //PREPARAZIONE
+                    [
+                        'Versare rum bianco, crema di cocco e succo d\'ananas nel frullatore',
+                        'Aggiungere il ghiaccio',
+                        'Frullare fino a ottenere un composto cremoso',
+                        'Versare il cocktail nel bicchiere',
+                        'Guarnire con una fetta di ananas'
+                    ],
+                    //RECENSIONE
+                    [
+                        'foto' => '/Immagini/profilo2.jpg',
+                        'nome' => 'Martina Shake',
+                        'tempo_icon' => '/Immagini/recenti2.png',
+                        'tempo' => '5h fa'
+                    ],
+                    //AZIONI
+                    [
+                        //LIKE
+                        [
+                            'svg' => 'M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z',
+                            'numero' => 527,
+                            'label' => ''
+                        ],
+                        //COMMENTI
+                        [
+                            'svg' => 'M21 6h-18v12h4v4l4-4h10z',
+                            'numero' => 41,
+                            'label' => ''
+                        ],
+                        //VARIAZIONI
+                        [
+                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
+                            'numero' => 15,
+                            'label' => 'varianti'
+                        ]
+                    ],
+                    //DIFFICOLTA
+                    'Media'
+                ),
+                // Moscow Mule
+                $moscowMule = new Drink(
+                    //NOME
+                    'Moscow Mule',
+                    //TIPO
+                    'Alcolico',
+                    //IMMAGINE
+                    '/Immagini/moscowmule.png',
+                    //INGREDIENTI
+                    [
+                        ['nome' => 'Vodka', 'quantita' => '45 ml'],
+                        ['nome' => 'Ginger beer', 'quantita' => '120 ml'],
+                        ['nome' => 'Succo di lime', 'quantita' => '15 ml'],
+                        ['nome' => 'Ghiaccio', 'quantita' => 'q.b.'],
+                        ['nome' => 'Lime', 'quantita' => '1 fetta']
+                    ],
+                    //PREPARAZIONE
+                    [
+                        'Riempire il bicchiere con ghiaccio',
+                        'Versare la vodka',
+                        'Aggiungere il succo di lime',
+                        'Completare con ginger beer',
+                        'Mescolare delicatamente e guarnire con lime'
+                    ],
+                    //RECENSIONE
+                    [
+                        'foto' => '/Immagini/profilo3.jpg',
+                        'nome' => 'Andrea MixLab',
+                        'tempo_icon' => 'xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+                        'tempo' => '1sett fa'
+                    ],
+                    //AZIONI
+                    [
+                        //LIKE
+                        [
+                            'svg' => 'M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z',
+                            'numero' => 289,
+                            'label' => ''
+                        ],
+                        //COMMENTI
+                        [
+                            'svg' => 'M21 6h-18v12h4v4l4-4h10z',
+                            'numero' => 19,
+                            'label' => ''
+                        ],
+                        //VARIAZIONI
+                        [
+                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
+                            'numero' => 7,
+                            'label' => 'varianti'
+                        ]
+                    ],
+                    //DIFFICOLTA
+                    'Facile'
+                ),
+                // Aperol Spritz
+                $aperolSpritz = new Drink(
+                    //NOME
+                    'Aperol Spritz',
+                    //TIPO
+                    'Alcolico',
+                    //IMMAGINE
+                    '/Immagini/aperolspritz.png',
+                    //INGREDIENTI
+                    [
+                        ['nome' => 'Aperol', 'quantita' => '60 ml'],
+                        ['nome' => 'Prosecco', 'quantita' => '90 ml'],
+                        ['nome' => 'Soda', 'quantita' => '30 ml'],
+                        ['nome' => 'Ghiaccio', 'quantita' => 'q.b.'],
+                        ['nome' => 'Arancia', 'quantita' => '1 fetta']
+                    ],
+                    //PREPARAZIONE
+                    [
+                        'Riempire un calice con ghiaccio',
+                        'Versare il Prosecco',
+                        'Aggiungere l\'Aperol',
+                        'Completare con la soda',
+                        'Mescolare delicatamente e guarnire con una fetta di arancia'
+                    ],
+                    //RECENSIONE
+                    [
+                        'foto' => '/Immagini/profilo4.jpg',
+                        'nome' => 'Sara CocktailMood',
+                        'tempo_icon' => '/Immagini/recenti2.png',
+                        'tempo' => '3h fa'
+                    ],
+                    //AZIONI
+                    [
+                        //LIKE
+                        [
+                            'svg' => 'M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z',
+                            'numero' => 603,
+                            'label' => ''
+                        ],
+                        //COMMENTI
+                        [
+                            'svg' => 'M21 6h-18v12h4v4l4-4h10z',
+                            'numero' => 47,
+                            'label' => ''
+                        ],
+                        //VARIAZIONI
+                        [
+                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
+                            'numero' => 11,
+                            'label' => 'varianti'
+                        ]
+                    ],
+                    //DIFFICOLTA
+                    'Facile'
+                )];
 ?>
 
 <!DOCTYPE html>
@@ -31,489 +311,15 @@
 
                 <div class="Feed-Bottoni">
                     <button class="tab Attivo">Tutti</button>
-                    <button class="tab"><img src="/Immagini/popolari.png" alt="" class="icon">Popolari</button>
-                    <button class="tab"><img src="/Immagini/recenti.png" alt="" class="icon">Recenti</button>
+                    <button class="tab"><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up-icon lucide-trending-up"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>Popolari</button>
+                    <button class="tab"><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Recenti</button>
                 </div>
             </div>
 
-            <div class="post">
-                <div class="sezionesinistra">
-                    <h1>Negroni</h1>
-                    <div class="ImgRicetta"> 
-                    <img src="/Immagini/negroni.png" alt="Negroni" class="Drink">
-                    </div>
-                </div>
-                <div class="sezionedestra">
-                    <div class="sezioneGuida">
-                        <div class="ingredienti-box">
-                            <div class="titoletti">
-                                <h3>Ingredienti</h3>
-                                <span>Alcolico</span>
-                            </div>
 
-                           <ul class="ingredienti">
-                            <li>
-                                <p class="nome">Gin</p>
-                                <p class="quantita">30 ml</p>
-                            </li>
-                            <li>
-                                <p class="nome">Campari bitter</p>
-                                <p class="quantita">30 ml</p>
-                            </li>
-                            <li>
-                                <p class="nome">Vermouth rosso</p>
-                                <p class="quantita">30 ml</p>
-                            </li>
-                            <li>
-                                <p class="nome">Arancia</p>
-                                <p class="quantita">1 fetta</p>
-                            </li>
-                           </ul>
-
-                        </div>
-                        <div class="preparazione-box">
-                            <h3>Preparazione</h3>
-
-                            <ol class="preparazione">
-                                <li>Versare i 30ml di Campari bitter</li>
-                                <li>Aggiungere i 30 ml di Vermouth rosso</li>
-                                <li>Aggiungere i 30ml di Gin</li>
-                                <li>Mescolare il Negroni</li>
-                                <li>Guarnire con la fetta di arancia</li>
-                            </ol>
-                        </div>
-
-                    </div>
-                    <div class="SezRecensione">
-                        <div class="sinistra">
-                        <div class="profilo">
-                            <img src="/Immagini/Fiussss.jpg" alt="Foto_profilo" class="Fotoprofilo">
-                            <div class="dati">
-                                <h4>Fius Gamer</h4>
-                                <div class="dati-tempo">
-                                    <img src="/Immagini/recenti2.png" alt="tempo" class="icon"><span>6g fa</span>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        
-                        
-                        <div class="centro">
-                        <div class="azione">
-                          <svg viewBox="0 0 24 24" class="icon">
-                            <path d="M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z"/>
-                          </svg>
-                          <span>342</span>
-                        </div>
-                      
-                      <div class="azione">
-                        <svg viewBox="0 0 24 24" class="icon">
-                            <path d="M21 6h-18v12h4v4l4-4h10z"/>
-                        </svg>
-                        <span>28</span>
-                      </div>
-                      
-                      <div class="azione">
-                        <svg viewBox="0 0 24 24" class="icon">
-                            <path d="M825.6 460.8c-12.8 0-32 6.4-44.8 12.8l-115.2-108.8c6.4-19.2 12.8-38.4 12.8-57.6 0-64-51.2-121.6-121.6-121.6-64 0-121.6 51.2-121.6 121.6 0 44.8 19.2 76.8 51.2 102.4L409.6 640h-6.4c-25.6 0-51.2 6.4-70.4 19.2L243.2 582.4c6.4-12.8 6.4-19.2 6.4-32 0-51.2-38.4-89.6-89.6-89.6-51.2 0-89.6 38.4-89.6 89.6 0 51.2 38.4 89.6 89.6 89.6 19.2 0 32-6.4 44.8-12.8L294.4 704c-6.4 12.8-12.8 32-12.8 51.2 0 64 51.2 121.6 121.6 121.6 64 0 121.6-51.2 121.6-121.6 0-44.8-19.2-76.8-51.2-102.4l76.8-230.4h6.4c25.6 0 44.8-6.4 64-19.2L736 512c-6.4 12.8-6.4 19.2-6.4 32 0 51.2 38.4 89.6 89.6 89.6 51.2 0 89.6-38.4 89.6-89.6s-32-83.2-83.2-83.2z m-409.6 352c-32 0-57.6-25.6-57.6-57.6s25.6-57.6 57.6-57.6 57.6 25.6 57.6 57.6-25.6 57.6-57.6 57.6z" />
-                            </svg> 
-                        <span>12 varianti</span>
-                      </div>
-                      </div>
-                      
-                      <div class="difficolta">
-                        <span>Facile</span>
-                      </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="post">
-    <div class="sezionesinistra">
-        <h1>Virgin Mojito</h1>
-        <div class="ImgRicetta"> 
-        <img src="/Immagini/virginmojito.png" alt="Virgin Mojito" class="Drink">
-        </div>
-    </div>
-    <div class="sezionedestra">
-        <div class="sezioneGuida">
-            <div class="ingredienti-box">
-                <div class="titoletti">
-                    <h3>Ingredienti</h3>
-                    <span>Analcolico</span>
-                </div>
-
-               <ul class="ingredienti">
-                <li>
-                    <p class="nome">Lime</p>
-                    <p class="quantita">1/2</p>
-                </li>
-                <li>
-                    <p class="nome">Menta fresca</p>
-                    <p class="quantita">8 foglie</p>
-                </li>
-                <li>
-                    <p class="nome">Zucchero di canna</p>
-                    <p class="quantita">2 cucchiaini</p>
-                </li>
-                <li>
-                    <p class="nome">Soda</p>
-                    <p class="quantita">100 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Ghiaccio</p>
-                    <p class="quantita">q.b.</p>
-                </li>
-               </ul>
-
-            </div>
-            <div class="preparazione-box">
-                <h3>Preparazione</h3>
-
-                <ol class="preparazione">
-                    <li>Mettere il lime tagliato a pezzi e lo zucchero nel bicchiere</li>
-                    <li>Pestare delicatamente insieme alle foglie di menta</li>
-                    <li>Aggiungere il ghiaccio</li>
-                    <li>Versare la soda</li>
-                    <li>Mescolare e servire ben freddo</li>
-                </ol>
-            </div>
-
-        </div>
-        <div class="SezRecensione">
-            <div class="sinistra">
-            <div class="profilo">
-                <img src="/Immagini/profilo5.jpg" alt="Foto_profilo" class="Fotoprofilo">
-                <div class="dati">
-                    <h4>Giulia FreshMix</h4>
-                    <div class="dati-tempo">
-                        <img src="/Immagini/recenti2.png" alt="tempo" class="icon"><span>8h fa</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-            
-            <div class="centro">
-            <div class="azione">
-              <svg viewBox="0 0 24 24" class="icon">
-                <path d="M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z"/>
-              </svg>
-              <span>255</span>
-            </div>
-          
-          <div class="azione">
-            <svg viewBox="0 0 24 24" class="icon">
-                <path d="M21 6h-18v12h4v4l4-4h10z"/>
-            </svg>
-            <span>17</span>
-          </div>
-          
-          <div class="azione">
-            <svg viewBox="0 0 24 24" class="icon">
-                <path d="M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z"/>
-            </svg>
-            <span>6 varianti</span>
-          </div>
-          </div>
-          
-          <div class="difficolta">
-            <span>Facile</span>
-          </div>
-
-        </div>
-    </div>
-            </div>  
-
-            <div class="post">
-    <div class="sezionesinistra">
-        <h1>Piña Colada</h1>
-        <div class="ImgRicetta"> 
-        <img src="/Immagini/pinacolada.png" alt="Piña Colada" class="Drink">
-        </div>
-    </div>
-    <div class="sezionedestra">
-        <div class="sezioneGuida">
-            <div class="ingredienti-box">
-                <div class="titoletti">
-                    <h3>Ingredienti</h3>
-                    <span>Alcolico</span>
-                </div>
-
-               <ul class="ingredienti">
-                <li>
-                    <p class="nome">Rum bianco</p>
-                    <p class="quantita">50 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Crema di cocco</p>
-                    <p class="quantita">50 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Succo d'ananas</p>
-                    <p class="quantita">100 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Ghiaccio</p>
-                    <p class="quantita">q.b.</p>
-                </li>
-                <li>
-                    <p class="nome">Ananas</p>
-                    <p class="quantita">1 fetta</p>
-                </li>
-               </ul>
-
-            </div>
-            <div class="preparazione-box">
-                <h3>Preparazione</h3>
-
-                <ol class="preparazione">
-                    <li>Versare rum bianco, crema di cocco e succo d'ananas nel frullatore</li>
-                    <li>Aggiungere il ghiaccio</li>
-                    <li>Frullare fino a ottenere un composto cremoso</li>
-                    <li>Versare il cocktail nel bicchiere</li>
-                    <li>Guarnire con una fetta di ananas</li>
-                </ol>
-            </div>
-
-        </div>
-        <div class="SezRecensione">
-            <div class="sinistra">
-            <div class="profilo">
-                <img src="/Immagini/profilo2.jpg" alt="Foto_profilo" class="Fotoprofilo">
-                <div class="dati">
-                    <h4>Martina Shake</h4>
-                    <div class="dati-tempo">
-                        <img src="/Immagini/recenti2.png" alt="tempo" class="icon"><span>5h fa</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-            
-            <div class="centro">
-            <div class="azione">
-              <svg viewBox="0 0 24 24" class="icon">
-                <path d="M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z"/>
-              </svg>
-              <span>527</span>
-            </div>
-          
-          <div class="azione">
-            <svg viewBox="0 0 24 24" class="icon">
-                <path d="M21 6h-18v12h4v4l4-4h10z"/>
-            </svg>
-            <span>41</span>
-          </div>
-          
-          <div class="azione">
-            <svg viewBox="0 0 24 24" class="icon">
-                <path d="M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z"/>
-            </svg>
-            <span>15 varianti</span>
-          </div>
-          </div>
-          
-          <div class="difficolta">
-            <span>Media</span>
-          </div>
-
-        </div>
-    </div>
-            </div>
-
-            
-            <div class="post">
-    <div class="sezionesinistra">
-        <h1>Moscow Mule</h1>
-        <div class="ImgRicetta"> 
-        <img src="/Immagini/moscowmule.png" alt="Moscow Mule" class="Drink">
-        </div>
-    </div>
-    <div class="sezionedestra">
-        <div class="sezioneGuida">
-            <div class="ingredienti-box">
-                <div class="titoletti">
-                    <h3>Ingredienti</h3>
-                    <span>Alcolico</span>
-                </div>
-
-               <ul class="ingredienti">
-                <li>
-                    <p class="nome">Vodka</p>
-                    <p class="quantita">45 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Ginger beer</p>
-                    <p class="quantita">120 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Succo di lime</p>
-                    <p class="quantita">15 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Ghiaccio</p>
-                    <p class="quantita">q.b.</p>
-                </li>
-                <li>
-                    <p class="nome">Lime</p>
-                    <p class="quantita">1 fetta</p>
-                </li>
-               </ul>
-
-            </div>
-            <div class="preparazione-box">
-                <h3>Preparazione</h3>
-
-                <ol class="preparazione">
-                    <li>Riempire il bicchiere con ghiaccio</li>
-                    <li>Versare la vodka</li>
-                    <li>Aggiungere il succo di lime</li>
-                    <li>Completare con ginger beer</li>
-                    <li>Mescolare delicatamente e guarnire con lime</li>
-                </ol>
-            </div>
-
-        </div>
-        <div class="SezRecensione">
-            <div class="sinistra">
-            <div class="profilo">
-                <img src="/Immagini/profilo3.jpg" alt="Foto_profilo" class="Fotoprofilo">
-                <div class="dati">
-                    <h4>Andrea MixLab</h4>
-                    <div class="dati-tempo">
-                        <img src="/Immagini/recenti2.png" alt="tempo" class="icon"><span>1sett fa</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-            
-            <div class="centro">
-            <div class="azione">
-              <svg viewBox="0 0 24 24" class="icon">
-                <path d="M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z"/>
-              </svg>
-              <span>289</span>
-            </div>
-          
-          <div class="azione">
-            <svg viewBox="0 0 24 24" class="icon">
-                <path d="M21 6h-18v12h4v4l4-4h10z"/>
-            </svg>
-            <span>19</span>
-          </div>
-          
-          <div class="azione">
-            <svg viewBox="0 0 24 24" class="icon">
-                <path d="M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z"/>
-            </svg>
-            <span>7 varianti</span>
-          </div>
-          </div>
-          
-          <div class="difficolta">
-            <span>Facile</span>
-          </div>
-
-        </div>
-    </div>
-            </div>
-
-            <div class="post">
-    <div class="sezionesinistra">
-        <h1>Aperol Spritz</h1>
-        <div class="ImgRicetta"> 
-        <img src="/Immagini/aperolspritz.png" alt="Aperol Spritz" class="Drink">
-        </div>
-    </div>
-    <div class="sezionedestra">
-        <div class="sezioneGuida">
-            <div class="ingredienti-box">
-                <div class="titoletti">
-                    <h3>Ingredienti</h3>
-                    <span>Alcolico</span>
-                </div>
-
-               <ul class="ingredienti">
-                <li>
-                    <p class="nome">Aperol</p>
-                    <p class="quantita">60 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Prosecco</p>
-                    <p class="quantita">90 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Soda</p>
-                    <p class="quantita">30 ml</p>
-                </li>
-                <li>
-                    <p class="nome">Ghiaccio</p>
-                    <p class="quantita">q.b.</p>
-                </li>
-                <li>
-                    <p class="nome">Arancia</p>
-                    <p class="quantita">1 fetta</p>
-                </li>
-               </ul>
-
-            </div>
-            <div class="preparazione-box">
-                <h3>Preparazione</h3>
-
-                <ol class="preparazione">
-                    <li>Riempire un calice con ghiaccio</li>
-                    <li>Versare il Prosecco</li>
-                    <li>Aggiungere l'Aperol</li>
-                    <li>Completare con la soda</li>
-                    <li>Mescolare delicatamente e guarnire con una fetta di arancia</li>
-                </ol>
-            </div>
-
-        </div>
-        <div class="SezRecensione">
-            <div class="sinistra">
-            <div class="profilo">
-                <img src="/Immagini/profilo4.jpg" alt="Foto_profilo" class="Fotoprofilo">
-                <div class="dati">
-                    <h4>Sara CocktailMood</h4>
-                    <div class="dati-tempo">
-                        <img src="/Immagini/recenti2.png" alt="tempo" class="icon"><span>3h fa</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-            
-            <div class="centro">
-            <div class="azione">
-              <svg viewBox="0 0 24 24" class="icon">
-                <path d="M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z"/>
-              </svg>
-              <span>603</span>
-            </div>
-          
-          <div class="azione">
-            <svg viewBox="0 0 24 24" class="icon">
-                <path d="M21 6h-18v12h4v4l4-4h10z"/>
-            </svg>
-            <span>47</span>
-          </div>
-          
-          <div class="azione">
-            <svg viewBox="0 0 24 24" class="icon">
-                <path d="M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z"/>
-            </svg>
-            <span>11 varianti</span>
-          </div>
-          </div>
-          
-          <div class="difficolta">
-            <span>Facile</span>
-          </div>
-
-        </div>
-    </div>
-            </div>
-        
+            <?php foreach ($Post as $postSingolo): ?>
+                <?= $postSingolo->creaPostDrink(); ?>
+            <?php endforeach; ?>
         </body>
 
 </html>

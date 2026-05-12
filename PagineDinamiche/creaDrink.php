@@ -6,13 +6,15 @@
 
 <!DOCTYPE html>
 <html lang="it">
+    <script src="<?= $stile["creaDrink"]?>"></script>
     <?php require_once __DIR__ . "/../" . $elementiCondivisi["head"];?>
         <body>
             <?php require_once __DIR__ . "/../" . $elementiCondivisi["navbar"];?>
             
         <div class="riquadroSfondo">
             <div class="sezioneTesto">
-            <img src="../Immagini/aggiungi_drink.png" alt="Aggiungi Drink">    
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-fading-plus-icon lucide-circle-fading-plus"><path d="M12 2a10 10 0 0 1 7.38 16.75"/><path d="M12 8v8"/><path d="M16 12H8"/><path d="M2.5 8.875a10 10 0 0 0-.5 3"/><path d="M2.83 16a10 10 0 0 0 2.43 3.4"/><path d="M4.636 5.235a10 10 0 0 1 .891-.857"/><path d="M8.644 21.42a10 10 0 0 0 7.631-.38"/></svg>
+    
             <h1>Nuovo Drink</h1>
             <h4>Condividi la tua creazione e lascia che gli altri la migliorino</h4>
             </div>
@@ -58,6 +60,11 @@
                     <label for="Immagine" class=" spazioImmagine">
                     <span class="IconaImm"> + </span>
                     <span class="TestoImm">Carica immagine del drink</span>
+
+                    <img id="anteprimaImmagine" alt="Anteprima drink" hidden>
+                        <p id="infoFile" hidden></p>
+                        <p id="erroreFile" hidden></p>
+        
                     <input type="file" id="Immagine" name="Immagine" accept="image/*" required>
                     </label>
                     </div>
@@ -91,8 +98,8 @@
                 
                           
                 
-                <button class="annulla" type="delete"> <img src="../Immagini/Annulla.png"> Annulla </button>
-                <button class="inviato" type="submit"> <img src="../Immagini/iconaAccedi.png"> Pubblica </button>
+                <button class="annulla" type="reset"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo2-icon lucide-undo-2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg> Annulla </button>
+                <button class="inviato" type="submit"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-right-icon lucide-circle-arrow-right"><circle cx="12" cy="12" r="10"/><path d="m12 16 4-4-4-4"/><path d="M8 12h8"/></svg> Pubblica </button>
 
             </form>
 
@@ -100,6 +107,7 @@
         </div>
         </div>
             
+        <script src="../JS/form.js"></script>
         </body>
 
 </html>

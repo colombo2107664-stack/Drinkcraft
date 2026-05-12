@@ -111,6 +111,7 @@
   fill: none;
   stroke: #A9B4C7;
   stroke-width: 1.6;
+  margin-right: var(--spazio-3xs);
 }
 
 .scritte {

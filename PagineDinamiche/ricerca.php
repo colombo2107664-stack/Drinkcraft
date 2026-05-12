@@ -13,9 +13,7 @@
         
         <div class="riquadroSfondo">
             <div class="sezioneTesto">
-            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-            <path d="M640 576l192 192c12.8 12.8 12.8 32 0 44.8s-32 12.8-44.8 0L595.2 620.8c-44.8 32-102.4 51.2-160 51.2-147.2 0-268.8-121.6-268.8-268.8S288 134.4 435.2 134.4 704 256 704 403.2c0 57.6-19.2 115.2-51.2 160zM435.2 198.4c-115.2 0-204.8 89.6-204.8 204.8s89.6 204.8 204.8 204.8 204.8-89.6 204.8-204.8-89.6-204.8-204.8-204.8z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
     
             <h1> Inizia la tua ricerca  </h1>
 

@@ -30,13 +30,9 @@
 .sezioneTitolo svg{
     background-color: var(--sfondo-pannello);
     border-radius: var(--raggio-lg);
-    height: 100%;
-    width:auto;
-
-    aspect-ratio: 1/1;
-    gap: var(--spazio-lg);
-    fill:none;
-    stroke:#4DD0E1;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
 }
 
 .sezioneTitolo h1{
@@ -49,6 +45,33 @@
     color: var(--testo-secondario);
 }
 
+
+.indietro {
+    margin: 1.25rem;
+    color: #F2F7FF;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    font-size: var(--font-corpo);
+    border: 1px solid var(--testo-principale);
+    border-radius:var(--raggio-md);
+    position: absolute;
+    
+    background-color: var(--colore-accento);
+    color: var(--testo-principale);
+    border-radius:var(--raggio-lg);
+    font-size:var(--font-corpo-piccolo);
+}
+.indietro:hover{
+    background-color: var(--colore-accento-hover);
+    transform: translateY(-2px); 
+}
+
+.icon{
+    width:1.35em;
+    height: 1.35em;
+    margin-right: var(--spazio-2xs);
+}
 
 
 .SezioneDrink{

@@ -37,11 +37,12 @@
     margin-bottom: var(--spazio-xl);
 }
 
-.riquadroSfondo img{
+.sezioneTesto svg{
     background-color: var(--sfondo-pannello);
     border-radius: var(--raggio-lg);
-    height: 15%;
-    gap: var(--spazio-lg);
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .riquadroSfondo h1{
@@ -107,6 +108,15 @@
     overflow: hidden;
 }
 
+#anteprimaImmagine{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--raggio-md);
+    position: absolute;
+    inset: 0;
+}
+
 .spazioImmagine:hover{
     border-color: var(--colore-accento);
     background: rgba(255, 138, 31, 0.10);
@@ -118,6 +128,44 @@
     inset: 0;
     opacity: 0;
     cursor: pointer;
+    z-index: 3;
+}
+
+#antemprimaImmagine{
+    width: 100%;
+    max-width: 220px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: var(--raggio-md);
+    border: 1px solid var(--bordo-leggero);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.20);
+    display: block;
+    z-index: 1;
+}
+
+#anteprimaImmagine[hidden]{
+    display: none;
+}
+
+#infoFile,
+#erroreFile{
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    z-index: 1;
+}
+
+#infoFile{
+    color: var(--testo-secondario);
+}
+
+#erroreFile{
+    color: #ff8f8f;
+}
+
+#infoFile[hidden],
+#erroreFile[hidden]{
+    display: none;
 }
 
 .IconaImm{
@@ -131,6 +179,8 @@
     font-size: clamp(1.4rem, 2.5vw, 1.75rem);
     font-weight: bold;
 }
+
+
 
 .TestoImm{
     font-size: clamp(1rem, 1.6vw, 1.1rem);
@@ -318,7 +368,6 @@ input[type="radio"]:checked + .Opzionebottone{
     grid-column: 2;
     grid-row:2;
     height:100%;
-    margin: top 0;
    
     display: flex;
     flex-direction: row;
@@ -369,8 +418,10 @@ input[type="radio"]:checked + .Opzionebottone{
 
 .sezioneForm button img{
     width: clamp(1rem, 2vw, 1.5rem);
-    height:auto;
+    height: auto;
     aspect-ratio: 1/1;
+    border-radius: 100px;
+    margin-right: var(--spazio-2xs);
 }
 
 .sezioneForm button:hover{

@@ -48,7 +48,8 @@
                     <div class="dati">
                         <h4>Giulia FreshMix</h4>
                         <div class="dati-tempo">
-                            <img src="/Immagini/recenti.png" alt="tempo" class="icon"><span>8h fa</span>
+                            <svg class= 'icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            <span>8h fa</span>
                         </div>
                     </div>
                     <div class="difficolta">
@@ -85,7 +86,7 @@
                 </div>
 
                 <div class="bottoni">
-                    <a href="<?= $pagine['variazioneDrink'] ?>"><button class="creavariante">Crea una variante</button></a>
+                    <a href="<?= $pagine['VariazioneDrink'] ?>"><button class="creavariante">Crea una variante</button></a>
                     <button class="salva">Salva</button>
                 </div>
             </div>

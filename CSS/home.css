@@ -308,7 +308,7 @@ a {
 .azione {
   display: flex;
   align-items: center;
-  gap: var(--spazio-2xs);
+  gap: var(--spazio-3xs);
 
   font-size: var(--font-corpo);
   color: #F2F7FF;
@@ -320,6 +320,7 @@ a {
   fill: none;
   stroke: #A9B4C7;
   stroke-width: 1.6;
+  margin-right: var(--spazio-3xs);
 }
 
 .sinistra {

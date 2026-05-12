@@ -1,22 +1,18 @@
 
 .riquadroSfondo{
-    position:fixed;
-    left: 50%;
-    top:10%;
-    transform: translateX(-50%);
-    
+    position: relative;
+    margin: 0 auto;
 
     color:#F2F7FF;
     width: 50%;
-    height: 60%;
-    
+    height: auto;
 
     text-align: center;
     padding: var(--spazio-xl) var(--spazio-2xl);
 
     display:grid;
     grid-template-rows: auto auto;
-    row-gap: var(--spazio-3xl);
+    row-gap: var(--spazio-xl);
 }
 .fotoSopra{
     background-color:#12474D;
@@ -39,13 +35,11 @@
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255,255,255,0.14);
     padding: var(--spazio-xl);
-    width: 98%;
+    width: 80%;
+    max-width: 500px;
     height:auto;
     border-radius: var(--raggio-sm);
-    margin-top: var(--spazio-3xl);
-    position:absolute;
-    top:25%;
-    left:1%;
+    margin: 0 auto;
 }
 .campo{
     display: flex;
@@ -79,6 +73,9 @@
     width: 4%;
     border-radius: 100px;
     margin-right: var(--spazio-2xs);
+}
+.inviato svg{
+    margin-left: var(--spazio-3xl);
 }
 
 .inviato:hover{
