@@ -104,5 +104,57 @@
                 </div>
             </div>
         </div>
+        <div class="sezCommenti" >
+            <h1>Commenti del post</h1>  
+            <div class="commento"> 
+                <p class=testoCommento>
+                    Che bello questo drink! Devo assolutamente riprovarlo
+                </p>
+                <div class="profiloPiccolo">
+                    <img src="/Immagini/giuliafreshmix.png" alt="Foto_profilo" class="Fotoprofilo">
+                    <div class="dati">
+                        <h4>Giulia FreshMix</h4>
+                        <div class="dati-tempo">
+                            <svg class= 'icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            <span>8h fa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="commento"> 
+                <p class=testoCommento>
+                    Che bello questo drink! Devo assolutamente riprovarlo
+                </p>
+                <div class="profiloPiccolo">
+                    <img src="/Immagini/giuliafreshmix.png" alt="Foto_profilo" class="Fotoprofilo">
+                    <div class="dati">
+                        <h4>Giulia FreshMix</h4>
+                        <div class="dati-tempo">
+                            <svg class= 'icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            <span>8h fa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="commento"> 
+                <p class=testoCommento>
+                    Che bello questo drink! Devo assolutamente riprovarlo
+                </p>
+                <div class="profiloPiccolo">
+                    <img src="/Immagini/giuliafreshmix.png" alt="Foto_profilo" class="Fotoprofilo">
+                    <div class="dati">
+                        <h4>Giulia FreshMix</h4>
+                        <div class="dati-tempo">
+                            <svg class= 'icon' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            <span>8h fa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
     </body>
 </html>
