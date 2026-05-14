@@ -11,7 +11,7 @@
             <?php require_once __DIR__ . "/../" . $elementiCondivisi["navbar"];?>
             
 
-        <div class="drink">
+        <div class="drink" data-drink-id="negroni">
             <div class="sinistra">
                 <div class="ingredienti-box">
                     <div class="titoletti">
@@ -19,7 +19,7 @@
                         <span>Alcolico</span>
                     </div>
 
-                    <ul class="ingredienti">
+                    <ul class="ingredienti" data-ingredienti>
                         <li>
                             <p class="nome">Gin</p>
                             <p class="quantita">30 ml</p>
@@ -38,7 +38,11 @@
                         </li>
                         </ul>
 
+                        
+
                     </div>
+                    <button class="copia-ingredienti" type="button" data-bottone-copia-ingredienti>Copia ingredienti</button>
+                    
             </div>
             <div class="centro">
                 <h1>Negroni</h1>
@@ -56,13 +60,13 @@
                         <span>Facile</span>
                     </div>
                 </div>
-                <img src="../Immagini/negroni.png" alt="Negroni" class="immaginedrink">
+                <img src="../Immagini/negroni.png" alt="Negroni" class="immaginedrink" data-immagine-drink>
                 <div class="recensione">
-                    <div class="azione">
+                    <div class="azione azione-like" role="button" tabindex="0" data-bottone-like data-url="/ApiDrink/like-drink.php" aria-pressed="false">
                         <svg viewBox="0 0 24 24" class="icon">
                             <path d="M20.8 4.6c-1.5-1.4-4-1.4-5.5 0L12 7.7l-3.3-3.1c-1.5-1.4-4-1.4-5.5 0-1.6 1.5-1.6 4 0 5.5L12 21l8.8-10.9c1.6-1.5 1.6-4 0-5.5z"/>
                         </svg>
-                        <span>255</span>
+                        <span data-contatore-like>255</span>
                     </div>
                     
                     <div class="azione">
@@ -77,17 +81,12 @@
                         </svg>
                         <span>6 varianti</span>
                     </div>
-                    <div class="azione">
-                        <svg viewBox="0 0 24 24" class="icon">
-                            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a2.5 2.5 0 0 0 0-1.39l7-4.11A2.99 2.99 0 1 0 15 5a2.96 2.96 0 0 0 .04.49l-7 4.11a3 3 0 1 0 0 4.8l7.05 4.14c-.03.16-.05.32-.05.49a3 3 0 1 0 3-3z"/>
-                        </svg>
-                        <span>Condividi</span>
-                    </div>
+                    
                 </div>
 
                 <div class="bottoni">
                     <a href="<?= $pagine['VariazioneDrink'] ?>"><button class="creavariante">Crea una variante</button></a>
-                    <button class="salva">Salva</button>
+                    <button class="salva" type="button" data-bottone-salva data-url="/ApiDrink/salva-drink.php" aria-pressed="false">Salva</button>
                 </div>
             </div>
             <div class="destra">
@@ -104,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <div class="sezCommenti" >
+        <div class="sezCommenti" data-lista-commenti>
             <h1>Commenti del post</h1>  
             <div class="commento"> 
                 <p class=testoCommento>
@@ -154,7 +153,17 @@
                 </div>
             </div>
 
-            
+            <form class="form-commento" data-form-commento data-url="/ApiDrink/commento-drink.php">
+                <textarea class="campo-commento" data-campo-commento name="testo_commento" placeholder="Scrivi un commento"></textarea>
+                <button class="bottone-commento" type="submit">Invia</button>
+                <p class="messaggio-commento" data-messaggio-commento></p>
+            </form>
         </div>
+        <script src="<?= $JS['DrUtili'] ?>"></script>
+        <script src="<?= $JS['DrLike'] ?>"></script>
+        <script src="<?= $JS['DrSalvataggi'] ?>"></script>
+        <script src="<?= $JS['DrCommenti'] ?>"></script>
+        <script src="<?= $JS['DrImmagine'] ?>"></script>
+        <script src="<?= $JS['DrIngredienti'] ?>"></script>
     </body>
 </html>

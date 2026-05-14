@@ -70,19 +70,30 @@ class Drink
         }
 
         $azioniHtml = '';
-        foreach ($this->getAzioni() as $azione) {
+        foreach ($this->getAzioni() as $indiceAzione => $azione) {
+            $classiAzione = 'azione';
+            $attributiAzione = '';
+            $attributiNumero = '';
+
+            if ($indiceAzione === 0) {
+                $classiAzione .= ' azione-like';
+                $attributiAzione = ' role="button" tabindex="0" data-bottone-like data-url="/ApiDrink/like-drink.php" aria-pressed="false"';
+                $attributiNumero = ' data-contatore-like';
+            }
+
             $azioniHtml .= '
-                <div class="azione">
+                <div class="' . $classiAzione . '"' . $attributiAzione . '>
                 <svg viewBox="0 0 24 24" class="icon">
                     <path d="' . htmlspecialchars($azione['svg']) . '"></path>
                 </svg>                    
-                <span>' . htmlspecialchars($azione['numero']) . ' ' . htmlspecialchars($azione['label']) . '</span>
+                <span' . $attributiNumero . '>' . htmlspecialchars($azione['numero']) . ' ' . htmlspecialchars($azione['label']) . '</span>
                 </div>';
         }
         $link = htmlspecialchars($pagine['SingoloDrink']);
+        $drinkId = htmlspecialchars(strtolower(str_replace(' ', '-', $this->getNome())));
 
         return '
-        <a href="'. $link .'"><div class="post">
+        <a href="'. $link .'"><div class="post" data-drink-id="' . $drinkId . '">
             <div class="sezionesinistra">
                 <h1>' . htmlspecialchars($this->getNome()) . '</h1>
                 <div class="ImgRicetta">

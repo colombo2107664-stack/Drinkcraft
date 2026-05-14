@@ -310,5 +310,7 @@
                 <a href="<?= $pagine['creaDrink'] ?>"><button class="partecipa-bottone">Partecipa alla Sfida</button></a>
 
             </div>
+        <script src="<?= $JS['DrUtili'] ?>"></script>
+        <script src="<?= $JS['DrLike'] ?>"></script>
     </body>
 </html>

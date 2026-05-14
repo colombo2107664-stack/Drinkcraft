@@ -59,12 +59,14 @@
     display:flex;
     justify-content: flex-end;
     align-items: center;
+    gap: var(--spazio-sm);
 }
-.salvati button{
+.salvati button,
+.bottone-modifica-profilo{
     background-color: var(--colore-accento);
     color: var(--testo-principale);
     border-radius:var(--raggio-lg);
-    font-size:var(--font-corpo-piccolo);
+    font-size:var(--font-corpo);
 
     display:flex;
     align-items: center;
@@ -80,7 +82,14 @@
 
 }
 
-.salvati button:hover{
+.bottone-modifica-profilo {
+    background-color: #12474D;
+    border: 1px solid rgba(255,255,255,0.14);
+    cursor: pointer;
+}
+
+.salvati button:hover,
+.bottone-modifica-profilo:hover{
     background-color: var(--colore-accento-hover);
     transform: translateY(-2px); 
 }
@@ -93,6 +102,29 @@
     fill: white;
 }
 
+.bottone-follow {
+    background-color: #12474D;
+    color: var(--testo-principale);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    padding: var(--spazio-sm) var(--spazio-lg);
+    cursor: pointer;
+    transition: 0.2s ease;
+    width: fit-content;
+    height: fit-content;
+    font-size:var(--font-corpo);
+    flex-shrink: 0;
+}
+
+.bottone-follow.seguito {
+    background-color: var(--colore-accento);
+
+}
+
+.bottone-follow.animazione-profilo {
+    animation: profiloClick 0.25s ease;
+}
+
 
 /* cose per le info (NOME ,FOLLOWER E DATI ) 
 */
@@ -102,10 +134,19 @@
     margin: var(--spazio-lg);
     max-width: 100%;
 }
+
+.riga-nome-profilo {
+    display: flex;
+    align-items: center;
+    gap: var(--spazio-sm);
+    flex-wrap: nowrap;
+}
+
 .nomeUtente{
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: bold;
     margin: var(--spazio-2xs);
+    white-space: nowrap;
     
 }
 
@@ -207,6 +248,93 @@
 
 
 }
+
+.modifica-profilo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spazio-sm);
+    width: min(720px, 92vw);
+    padding: var(--spazio-lg);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    background-color: #182231;
+    position: relative;
+}
+
+.modifica-profilo h3 {
+    grid-column: 1 / -1;
+    color: #4DD0E1;
+}
+
+.modifica-profilo input,
+.modifica-profilo textarea,
+.campo-file-profilo {
+    width: 100%;
+    color: var(--testo-principale);
+    background-color: var(--sfondo-input);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-md);
+    padding: var(--spazio-sm);
+}
+
+.modifica-profilo textarea {
+    grid-column: 1 / -1;
+    min-height: 90px;
+    resize: vertical;
+}
+
+.campo-file-profilo {
+    grid-column: 1 / -1;
+    cursor: pointer;
+}
+
+.campo-file-profilo input {
+    margin-top: var(--spazio-xs);
+}
+
+.popup-modifica-profilo {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spazio-xl);
+    background-color: rgba(0, 0, 0, 0.72);
+    z-index: 1200;
+    font-size: var(--font-corpo);
+}
+
+.popup-modifica-profilo.aperto {
+    display: flex;
+}
+
+.chiudi-popup-profilo {
+    position: absolute;
+    top: var(--spazio-sm);
+    right: var(--spazio-sm);
+    color: var(--testo-principale);
+    background-color: #12474D;
+    border: 1px solid rgba(255,255,255,0.14);
+    margin-bottom:var(--spazio-xs);
+    border-radius: var(--raggio-md);
+    padding: var(--spazio-xs) var(--spazio-sm);
+    cursor: pointer;
+}
+
+@keyframes profiloClick {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 /*Sezione per i trofei ottenuti 
 */
 .premi{
@@ -219,9 +347,12 @@
     border-radius: var(--raggio-lg);
 
     display:grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, calc((100% - (var(--spazio-sm) * 3)) / 4));
+    grid-auto-columns: calc((100% - (var(--spazio-sm) * 3)) / 4);
     grid-template-rows: auto minmax(50px,300px);
     column-gap: var(--spazio-sm);
+    overflow-x: auto;
+    overflow-y: hidden;
     
 }
 .titoloSezPremi{
@@ -232,14 +363,16 @@
     gap: var(--spazio-2xs);
     padding: var(--spazio-sm);
     padding-bottom: var(--spazio-sm);
-    grid-column: 1/-1;
+    grid-column: 1 / span 4;
 }
  
 .singoloPremio{
     display:grid;
+    grid-row: 2;
     grid-template-rows: auto auto;
     align-items: center;
     width:100%;
+    min-width: 0;
 
     margin-top: var(--spazio-sm);
     border:1px solid rgba(255,255,255,0.14);
@@ -320,6 +453,24 @@
     border-radius: var(--raggio-lg);
     padding: var(--spazio-sm);
 }
+
+.link-aggiungi-drink {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.aggiungi-drink-card {
+    width: calc(100% - (var(--spazio-lg) * 2));
+    height: calc(100% - (var(--spazio-lg) * 2));
+    min-height: 0;
+}
+
+.aggiungi-drink-card svg {
+    color: #F2F7FF;
+    stroke: #F2F7FF;
+}
+
 .postDrink img{
     width: 100%;
     height: 100%;
@@ -331,8 +482,10 @@
 
 .postDrink svg{
     width: 100%;
+    height: 100%;
     aspect-ratio: 1/1;
     display: block;
+    object-fit: contain;
     border-radius: var(--raggio-lg);
     margin: var(--spazio-2xs);
 }
@@ -349,5 +502,3 @@
     border-radius: var(--raggio-lg);
     padding: var(--spazio-sm);
 }
-
-

@@ -302,6 +302,34 @@
                 $pagine['partecipazionesfida'],
                 $pagine['Propostesfide']
             ),
+            new Sfida(
+                "Primavera Mediterranea",
+                "Crea un drink che celebri i sapori freschi del Mediterraneo usando almeno un agrume e un'erba aromatica",
+                "15 Apr",
+                127,
+                "Badge esclusivo",
+                "../Immagini/mediterraneo.png",
+                "mediterraneo",
+                "Maestro Mediterraneo",
+                "../Immagini/PrimaveraMediterranea.png",
+                "Primavera Mediterranea",
+                $pagine['partecipazionesfida'],
+                $pagine['Propostesfide']
+            ),
+            new Sfida(
+                "Primavera Mediterranea",
+                "Crea un drink che celebri i sapori freschi del Mediterraneo usando almeno un agrume e un'erba aromatica",
+                "15 Apr",
+                127,
+                "Badge esclusivo",
+                "../Immagini/mediterraneo.png",
+                "mediterraneo",
+                "Maestro Mediterraneo",
+                "../Immagini/PrimaveraMediterranea.png",
+                "Primavera Mediterranea",
+                $pagine['partecipazionesfida'],
+                $pagine['Propostesfide']
+            ),
             //Maestro Analcolico
             new Sfida(
                 "Zero Alcool, Massimo Gusto",
@@ -344,8 +372,10 @@
             
 
             <div class="sfondoProfilo">
-                <img class="fotoProfilo" src="../Immagini/lincolnBarrows.png">
-                <div class="salvati"><a href="<?= $pagine['postSalvati'] ?>"><button> Vedi i tuoi drink salvati  
+                <img class="fotoProfilo" src="../Immagini/lincolnBarrows.png" data-anteprima-immagine-profilo>
+                <div class="salvati">
+                    <button class="bottone-modifica-profilo" type="button" data-apri-modifica-profilo>Modifica profilo</button>
+                    <a href="<?= $pagine['postSalvati'] ?>"><button> Vedi i tuoi drink salvati  
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 4c-.4.4-.4 1 0 1.4L13.6 12 7 18.6c-.4.4-.4 1 0 1.4s1 .4 1.4 0l7-7c.4-.4.4-1 0-1.4l-7-7c-.4-.4-1-.4-1.4 0z"/>
                     </svg>
@@ -355,52 +385,67 @@
                 
 
                     <div class="nomeETag">
-                    <p class="nomeUtente">Lincoln Barrows</p>
-                    <p class="tagProfilo"> @viva_le_evasioni </p>
+                    <div class="riga-nome-profilo">
+                        <p class="nomeUtente" data-anteprima-nome>Lincoln Barrows</p>
+                        <button class="bottone-follow" type="button" data-bottone-follow aria-pressed="false">Segui</button>
+                    </div>
+                    <p class="tagProfilo" data-anteprima-username> @viva_le_evasioni </p>
                     </div>
                     <div class="informazioni">
                     <div class="follower"> 
                         <div class="dati">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
                             <p>Follower</p>
-                            <span>1.2K</span>
+                            <span data-contatore-profilo data-contatore-follower data-valore-finale="1200">1.2K</span>
                         </div>
                         <div class="dati">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-check-icon lucide-user-round-check"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="m16 19 2 2 4-4"/></svg>
                             <p>Seguiti</p>
-                            <span>500</span>
+                            <span data-contatore-profilo data-valore-finale="500">500</span>
                         </div>
                         <div class="dati">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-glass-water-icon lucide-glass-water"><path d="M5.116 4.104A1 1 0 0 1 6.11 3h11.78a1 1 0 0 1 .994 1.105L17.19 20.21A2 2 0 0 1 15.2 22H8.8a2 2 0 0 1-2-1.79z"/><path d="M6 12a5 5 0 0 1 6 0 5 5 0 0 0 6 0"/></svg>
                             <p>Drink</p>
-                            <span>3</span>
+                            <span data-contatore-profilo data-valore-finale="3">3</span>
                         </div>
                         <div class="dati">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy-icon lucide-trophy"><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/></svg>
                             <p>Trofei</p>
-                            <span>5</span>
+                            <span data-contatore-profilo data-valore-finale="5">5</span>
                         </div>
                     </div>
                     
                     <div class="descrizione">
                         <span> Biografia </span>
-                        <p>Appassionato di sedie elettriche e fughe dalla prigione, con una vasta collezione di ricette e
+                        <p data-anteprima-bio>Appassionato di sedie elettriche e fughe dalla prigione, con una vasta collezione di ricette e
                            una passione per la sperimentazione. Amo condividere le mie creazioni  insieme a mio fratello 
                            e quella fica della ragazza (che mi scopo a sua insaputa)
                         </p>
                     </div>
 
                     </div>
-                    
                     <div class="premi"> 
                         <div class="titoloSezPremi">Trofei ottenuti</div>
                         <?php foreach ($premi as $trofeo): ?>
                         <?= $trofeo->creaPremioOttenuto(); ?>
                         <?php endforeach; ?>
                         
-                        <div class="singoloPremio"> <svg class= "immPremio" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-fading-plus-icon lucide-circle-fading-plus"><path d="M12 2a10 10 0 0 1 7.38 16.75"/><path d="M12 8v8"/><path d="M16 12H8"/><path d="M2.5 8.875a10 10 0 0 0-.5 3"/><path d="M2.83 16a10 10 0 0 0 2.43 3.4"/><path d="M4.636 5.235a10 10 0 0 1 .891-.857"/><path d="M8.644 21.42a10 10 0 0 0 7.631-.38"/></svg> <div class="testoPremio">+ 2 altri</div></div>
                     </div>
                 
+            </div>
+
+            <div class="popup-modifica-profilo" data-popup-modifica-profilo>
+                <form class="modifica-profilo" data-form-modifica-profilo>
+                    <button class="chiudi-popup-profilo" type="button" data-chiudi-modifica-profilo>Chiudi</button>
+                    <h3>Modifica profilo</h3>
+                    <input type="text" data-campo-nome value="Lincoln Barrows" aria-label="Nome profilo">
+                    <input type="text" data-campo-username value="@viva_le_evasioni" aria-label="Username profilo">
+                    <textarea data-campo-bio aria-label="Biografia profilo">Appassionato di sedie elettriche e fughe dalla prigione, con una vasta collezione di ricette e una passione per la sperimentazione. Amo condividere le mie creazioni  insieme a mio fratello e quella fica della ragazza (che mi scopo a sua insaputa)</textarea>
+                    <label class="campo-file-profilo">
+                        Cambia foto profilo
+                        <input type="file" data-campo-immagine-profilo accept="image/*">
+                    </label>
+                </form>
             </div>
             
 
@@ -411,17 +456,18 @@
                     <?= $singolo->drinkProfilo(); ?>
                 <?php endforeach; ?>
 
-                <a href="<?= $pagine['creaDrink'] ?>"><button class="postDrink">
+                <a href="<?= $pagine['creaDrink'] ?>" class="link-aggiungi-drink"><button class="postDrink aggiungi-drink-card">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-fading-plus-icon lucide-circle-fading-plus"><path d="M12 2a10 10 0 0 1 7.38 16.75"/><path d="M12 8v8"/><path d="M16 12H8"/><path d="M2.5 8.875a10 10 0 0 0-.5 3"/><path d="M2.83 16a10 10 0 0 0 2.43 3.4"/><path d="M4.636 5.235a10 10 0 0 1 .891-.857"/><path d="M8.644 21.42a10 10 0 0 0 7.631-.38"/></svg>
                         <p>Aggiungi Drink</p> 
                     </button></a>
 
 
             </div>
-            
-        
+            <script src="<?= $JS['ProfiloUtili'] ?>"></script>
+            <script src="<?= $JS['ProfiloContatori'] ?>"></script>
+            <script src="<?= $JS['ProfiloFollow'] ?>"></script>
+            <script src="<?= $JS['ProfiloModifica'] ?>"></script>
             
         </body>
 
 </html>
-

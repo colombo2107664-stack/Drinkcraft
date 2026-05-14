@@ -320,6 +320,8 @@
             <?php foreach ($Post as $postSingolo): ?>
                 <?= $postSingolo->creaPostDrink(); ?>
             <?php endforeach; ?>
+            <script src="<?= $JS['DrUtili'] ?>"></script>
+            <script src="<?= $JS['DrLike'] ?>"></script>
         </body>
 
 </html>

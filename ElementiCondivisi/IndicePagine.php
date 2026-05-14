@@ -44,6 +44,15 @@ $stile = [
 
 $JS = [
     "form"                  => "../JS/form.js",
-
+    "DrUtili"               => "../JS/drink-utili.js",
+    "DrSalvataggi"          => "../JS/drink-salvataggi.js",
+    "DrLike"                => "../JS/drink-like.js",
+    "DrCommenti"            => "../JS/drink-commenti.js",
+    "DrImmagine"            => "../JS/drink-immagine.js",
+    "DrIngredienti"         => "../JS/drink-ingredienti.js",
+    "ProfiloUtili"          => "../JS/profilo-utili.js",
+    "ProfiloContatori"      => "../JS/profilo-contatori.js",
+    "ProfiloFollow"         => "../JS/profilo-follow.js",
+    "ProfiloModifica"       => "../JS/profilo-modifica.js"
 ]
 ?>

@@ -92,6 +92,35 @@ a{
   text-decoration: none;
 }
 
+.azione-like {
+  cursor: pointer;
+  border-radius: var(--raggio-sm);
+  padding: var(--spazio-3xs);
+}
+
+.azione-like.like-attivo .icon {
+  fill: red;
+  stroke: red;
+}
+
+.animazione-click {
+  animation: drinkClick 0.25s ease;
+}
+
+@keyframes drinkClick {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 /* TOOLBAR CON PULSANTI E LOGO */
 .toolbar {
