@@ -129,6 +129,16 @@ a {
 
 }
 
+.countdown-sfida {
+  color: #4DD0E1;
+  font-size: var(--font-corpo-piccolo);
+  margin-top: var(--spazio-3xs);
+}
+
+.postsfida.sfida-terminata {
+  opacity: 0.78;
+}
+
 .finale {
   padding: clamp(12px, 2vw, 18px);
   gap: clamp(16px, 3vw, 24px);
@@ -176,5 +186,8 @@ a {
   background-color: #FF9D47;
 }
 
-
+.bottoniF.sfida-disabilitata {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 

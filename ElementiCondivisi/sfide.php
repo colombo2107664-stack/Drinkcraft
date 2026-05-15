@@ -74,8 +74,10 @@ class Sfida {
     // METODO PER CREARE IL POST DELLA SFIDA
     public function creaPostSfida(): string
     {
+        $scadenzaCountdown = htmlspecialchars($this->getScadenza());
+
         return '
-        <div class="postsfida">
+        <div class="postsfida" data-sfida data-scadenza="' . $scadenzaCountdown . '">
             <div class="Sezsinistra">
                 <h1>' . htmlspecialchars($this->getTitolo()) . '</h1>
                 <p>' . htmlspecialchars($this->getDescrizione()) . '</p>
@@ -86,6 +88,7 @@ class Sfida {
                         <div class="scritte">
                             <h4 class="Titolo">Scadenza</h4>
                             <span class="valore">' . htmlspecialchars($this->getScadenza()) . '</span>
+                            <span class="countdown-sfida" data-countdown-sfida></span>
                         </div>
                     </div>
 

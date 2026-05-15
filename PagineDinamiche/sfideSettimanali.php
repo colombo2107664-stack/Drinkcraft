@@ -72,6 +72,8 @@
                 <?= $sfida->creaPostSfida(); ?>
             <?php endforeach; ?>
 
+            <script src="<?= $JS['SfideUtili'] ?>"></script>
+            <script src="<?= $JS['SfideCountdown'] ?>"></script>
 
         </body>
 </html>

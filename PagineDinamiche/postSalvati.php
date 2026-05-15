@@ -301,18 +301,39 @@
             <h4>Trova i tuoi cocktail preferiti sempre a portata di mano</h4>
             
             </div>
+
+            <div class="controlli-salvati">
+                <input type="search" data-input-ricerca-salvati placeholder="Cerca drink">
+                <select data-selettore-ordinamento>
+                    <option value="data">Ordina per data</option>
+                    <option value="categoria">Ordina per categoria</option>
+                    <option value="popolarita">Ordina per popolarità</option>
+                </select>
+            </div>
                         
-            <div class="SezioneDrink">
-                    <?php foreach ($listaSalvati as $singolo): ?>
-                        <?= $singolo->drinkProfilo(); ?>
+            <div class="SezioneDrink" data-lista-salvati>
+                    <?php foreach ($listaSalvati as $indice => $singolo): ?>
+                        <div class="elemento-salvato risultato-drink"
+                            data-risultato-salvato
+                            data-tipo="drink"
+                            data-nome="<?= htmlspecialchars($singolo->getNome()) ?>"
+                            data-categoria="<?= htmlspecialchars($singolo->getTipo()) ?>"
+                            data-popolarita="<?= htmlspecialchars((string) $singolo->getAzioni()[0]['numero']) ?>"
+                            data-data="<?= htmlspecialchars((string) (count($listaSalvati) - $indice)) ?>">
+                            <?= $singolo->drinkProfilo(); ?>
+                            <button class="bottone-rimuovi-salvato" type="button" data-bottone-rimuovi>Rimuovi</button>
+                        </div>
                     <?php endforeach; ?>
                 </div>
+                <p class="messaggio-vuoto-salvati" data-messaggio-vuoto-salvati>Nessun risultato trovato</p>
 
             </div>
             
-        
+            <script src="<?= $JS['SalvatiUtili'] ?>"></script>
+            <script src="<?= $JS['SalvatiRimozione'] ?>"></script>
+            <script src="<?= $JS['SalvatiOrdinamento'] ?>"></script>
+            <script src="<?= $JS['SalvatiRicerca'] ?>"></script>
             
         </body>
 
 </html>
-

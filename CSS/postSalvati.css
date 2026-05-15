@@ -73,6 +73,26 @@
     margin-right: var(--spazio-2xs);
 }
 
+.controlli-salvati {
+    width: 98%;
+    margin: var(--spazio-lg);
+    display: flex;
+    gap: var(--spazio-sm);
+}
+
+.controlli-salvati input,
+.controlli-salvati select {
+    color: var(--testo-principale);
+    background-color: var(--sfondo-input);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    padding: var(--spazio-sm);
+}
+
+.controlli-salvati input {
+    flex: 1;
+}
+
 
 .SezioneDrink{
     background-color: rgba(255, 255, 255, 0.08);
@@ -87,6 +107,24 @@
     
 }
 
+.risultato-drink.elemento-salvato {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #182231;
+    margin: var(--spazio-lg);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    padding: var(--spazio-sm);
+}
+
+.risultato-drink.elemento-salvato .postDrink {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
 .postDrink{
     background-color: #182231;
     display:flex;
@@ -97,6 +135,45 @@
     border-radius: var(--raggio-lg);
     padding: var(--spazio-sm);
 }
+
+.bottone-rimuovi-salvato {
+    order: -1;
+    align-self: flex-end;
+    margin: 0 0 var(--spazio-sm) 0;
+    color: #F2F7FF;
+    background-color: rgba(229, 111, 0, 0.92);
+    border: 1px solid rgba(255,255,255,0.20);
+    border-radius: var(--raggio-md);
+    padding: var(--spazio-3xs) var(--spazio-sm);
+    cursor: pointer;
+}
+
+.elemento-salvato.rimozione-in-corso {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: 0.2s ease;
+}
+
+.elemento-salvato.nascosto {
+    display: none;
+}
+
+.messaggio-vuoto-salvati {
+    display: none;
+    width: 98%;
+    margin: var(--spazio-lg);
+    padding: var(--spazio-lg);
+    text-align: center;
+    color: var(--testo-secondario);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.messaggio-vuoto-salvati.visibile {
+    display: block;
+}
+
 .postDrink img{
     width: 100%;
     height: 100%;
@@ -118,5 +195,3 @@
     border-radius: var(--raggio-lg);
     padding: var(--spazio-sm);
 }
-
-
