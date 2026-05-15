@@ -2,6 +2,24 @@
     require __DIR__ ."/../ElementiCondivisi/IndicePagine.php";
     $TitoloPagina=" Crea la tua variante";
     $StilePagina= $stile["VariazioneDrink"];
+
+    $drinkOriginale = [
+        "nome" => "Negroni",
+        "descrizione" => "Versione originale con gin, Campari e vermouth rosso.",
+        "ingredienti" => [
+            ["nome" => "Gin", "quantita" => "30 ml"],
+            ["nome" => "Campari bitter", "quantita" => "30 ml"],
+            ["nome" => "Vermouth rosso", "quantita" => "30 ml"],
+            ["nome" => "Arancia", "quantita" => "1 fetta"]
+        ],
+        "passaggi" => [
+            "Versare i 30ml di Campari bitter",
+            "Aggiungere i 30 ml di Vermouth rosso",
+            "Aggiungere i 30ml di Gin",
+            "Mescolare il Negroni",
+            "Guarnire con la fetta di arancia"
+        ]
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -19,49 +37,50 @@
                             </svg>     
             <h1> Nuova variante </h1>
 
-            <h4>Crea la tua versione di: <a class="nomeVecchio"> Nome del vecchio drink</a> </h4>
+            <h4>Crea la tua versione di: <a class="nomeVecchio"><?= htmlspecialchars($drinkOriginale["nome"]) ?></a> </h4>
             </div>
 
             <div class="sezioneForm">
-            <form class= "posForm" action="/invia" method="post">
+            <form class= "posForm" action="/invia" method="post" enctype="multipart/form-data" data-form-drink data-chiave-salvataggio="drinkcraft-variazione-negroni-temporaneo">
                 
                 <div class="campoTesto">
                 <label for="nomeDrink"> Nome della tua variante</label>
-                <input type="text" id="nomeDrink" name="NomeDrink" placeholder="Dai un nome al tuo drink..." required > 
+                <input type="text" id="nomeDrink" name="NomeDrink" placeholder="Dai un nome al tuo drink..." minlength="3" maxlength="60" required data-campo-nome-drink> 
                 </div>
 
                 <div class="campoDescrizione">
-                <label for="nomeDrink"> Breve descrizione di cosa hai cambiato</label>
-                <input type="text" id="nomeDrink" name="NomeDrink" placeholder="Scrivi qua le tue modifiche..." required > 
+                <label for="descrizioneVariazione"> Breve descrizione di cosa hai cambiato</label>
+                <input type="text" id="descrizioneVariazione" name="Descrizione" placeholder="Scrivi qua le tue modifiche..." required data-campo-descrizione-drink> 
                 </div>
      
                 <div class="campoImmagine">
                     <label for="Immagine" class=" spazioImmagine">
                     <span class="IconaImm"> + </span>
                     <span class="TestoImm">Carica immagine del drink</span>
-                    <input type="file" id="Immagine" name="Immagine" accept="image/*" required>
+                    <img id="anteprimaImmagine" alt="Anteprima" hidden>
+                    <input type="file" id="Immagine" name="Immagine" accept="image/*" data-campo-immagine-drink>
                     </label>
                     </div>
  
-                <div class="campoIngredienti">
+                <div class="campoIngredienti" data-lista-ingredienti>
                 <label for="Ingredienti"> Ingredienti</label>
-                <label for="quantita">Quantità</label>
+                <label for="quantita">Quantita</label>
                 
-                <input type="text" id="Ingredienti" name="Ingredienti" placeholder="Es. Gin" required> 
-                <input type="text" id="quantita" name="quantita" placeholder="30ml"required > 
+                <input type="text" id="Ingredienti" name="Ingredienti[]" placeholder="Es. Gin" required data-ingrediente-nome> 
+                <input type="text" id="quantita" name="quantita[]" placeholder="30ml"required data-ingrediente-quantita> 
 
-                <button type="button" > 
+                <button type="button" data-aggiungi-ingrediente> 
                     <span class="AggiungiPass"> + </span>  
                     Aggiungi Ingrediente</button>
                 </div>
 
 
 
-                <div class="campoPreparazione">
+                <div class="campoPreparazione" data-lista-passaggi>
                 <label>Preparazione</label>
-                <input type="text" id="Preparazione" name="Preparazione" placeholder="Es. 20 minuti" required>
+                <input type="text" id="Preparazione" name="Preparazione[]" placeholder="Es. 20 minuti" required data-passaggio-testo>
 
-                <button type="button" > 
+                <button type="button" data-aggiungi-passaggio> 
                     <span class="AggiungiPass"> + </span> 
                     Aggiungi passaggio </button>
                 </div>
@@ -72,8 +91,9 @@
                 
                           
                 
-                <button class="annulla" type="delete"> <img src="../Immagini/Annulla.png"> Annulla </button>
-                <button class="inviato" type="submit"> <img src="../Immagini/iconaAccedi.png"> 
+                <p class="messaggio-validazione" data-messaggio-validazione hidden></p>
+                <button class="annulla" type="reset"> <img src="../Immagini/Annulla.png"> Annulla </button>
+                <button class="inviato" type="submit" data-pulsante-pubblica disabled> <img src="../Immagini/iconaAccedi.png"> 
                             Pubblica Variante</button>
 
             </form>
@@ -82,7 +102,13 @@
         </div>
         </div>
         
-            
+        <script type="application/json" id="dati-drink-originale"><?= json_encode($drinkOriginale) ?></script>
+        <script src="<?= $JS['FormDrinkUtils'] ?>"></script>
+        <script src="<?= $JS['FormDrinkIngredienti'] ?>"></script>
+        <script src="<?= $JS['FormDrinkPassaggi'] ?>"></script>
+        <script src="<?= $JS['VariazionePrecompilazione'] ?>"></script>
+        <script src="<?= $JS['FormDrinkValidazione'] ?>"></script>
+        <script src="<?= $JS['FormDrinkSalvataggio'] ?>"></script>
         </body>
 
 </html>

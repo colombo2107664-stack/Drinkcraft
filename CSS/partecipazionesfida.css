@@ -199,6 +199,225 @@ a {
     background-color: #E56F00;
 }
 
+.partecipa-bottone:disabled {
+    opacity: 0.75;
+    cursor: default;
+}
+
+.azioni-partecipazione {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.drink-selezionato {
+    display: flex;
+    align-items: center;
+    width: min(100%, 28rem);
+    gap: 1rem;
+    padding: 0.75rem;
+    border: 0.0625rem solid rgba(255,255,255,0.14);
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.drink-selezionato[hidden] {
+    display: none;
+}
+
+.drink-selezionato img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 0.625rem;
+}
+
+.drink-selezionato h3,
+.drink-selezionato p {
+    margin: 0;
+}
+
+.drink-selezionato p {
+    color: var(--testo-secondario);
+    font-size: 0.9rem;
+    line-height: 1.35;
+}
+
+.popup-partecipazione {
+    display: none;
+    position: fixed;
+    inset: 0;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.65);
+    overflow-y: auto;
+    z-index: 11;
+}
+
+.popup-partecipazione.aperto {
+    display: flex;
+}
+
+.popup-partecipazione-contenuto {
+    width: min(100%, 44rem);
+    padding: 1.25rem;
+    border: 0.0625rem solid rgba(255,255,255,0.14);
+    border-radius: 0.75rem;
+    background-color: #101A2A;
+}
+
+.popup-nuovo-drink-contenuto {
+    width: min(100%, 58rem);
+}
+
+.intestazione-popup-partecipazione {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.intestazione-popup-partecipazione h3 {
+    margin: 0;
+}
+
+.chiudi-popup-partecipazione {
+    padding: 0.5rem 1rem;
+    border: 0.0625rem solid rgba(255,255,255,0.14);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: #F2F7FF;
+    cursor: pointer;
+}
+
+.lista-drink-pubblicati {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 0.75rem;
+}
+
+.drink-pubblicato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border: 0.0625rem solid rgba(255,255,255,0.14);
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #F2F7FF;
+    cursor: pointer;
+}
+
+.drink-pubblicato:hover {
+    background-color: rgba(229, 111, 0, 0.2);
+}
+
+.drink-pubblicato img {
+    width: 100%;
+    max-width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.625rem;
+}
+
+.popup-nuovo-drink .posForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.popup-nuovo-drink .campoTesto,
+.popup-nuovo-drink .campoCategoria,
+.popup-nuovo-drink .campoDifficolta,
+.popup-nuovo-drink .campoIngredienti,
+.popup-nuovo-drink .campoPreparazione {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.popup-nuovo-drink .campoImmagine {
+    grid-column: 2;
+    grid-row: 1 / 4;
+}
+
+.popup-nuovo-drink .campoIngredienti,
+.popup-nuovo-drink .campoPreparazione {
+    grid-column: 1 / -1;
+}
+
+.popup-nuovo-drink input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem;
+    border: 0.0625rem solid rgba(255,255,255,0.14);
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #F2F7FF;
+}
+
+.popup-nuovo-drink input[type="radio"] {
+    appearance: none;
+}
+
+.popup-nuovo-drink input[type="radio"]:checked + .Opzionebottone {
+    background-color: #E56F00;
+}
+
+.popup-nuovo-drink .Opzionebottone,
+.popup-nuovo-drink button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.625rem 1rem;
+    border: 0.0625rem solid rgba(255,255,255,0.14);
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #F2F7FF;
+    cursor: pointer;
+}
+
+.popup-nuovo-drink .spazioImmagine {
+    min-height: 13rem;
+    border: 0.125rem dashed rgba(255,255,255,0.24);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.popup-nuovo-drink .spazioImmagine input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.popup-nuovo-drink #anteprimaImmagine {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-nuovo-drink .rigaIngrediente,
+.popup-nuovo-drink .rigaPassaggio {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 0.5rem;
+}
+
 @media (max-width: 48rem) {
     .sfida {
         flex-direction: column;
@@ -216,5 +435,14 @@ a {
 
     .passo {
         column-gap: 0.875rem;
+    }
+
+    .popup-nuovo-drink .posForm {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-nuovo-drink .campoImmagine {
+        grid-column: 1;
+        grid-row: auto;
     }
 }

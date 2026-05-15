@@ -53,6 +53,7 @@
                     <label for="Immagine" class=" spazioImmagine">
                     <span class="IconaImm"> + </span>
                     <span class="TestoImm">Carica una foto profilo</span>
+                    <img id="anteprimaImmagine" alt="Anteprima" hidden>
                     <input type="file" id="Immagine" name="Immagine" accept="image/*" required>
                     </label>
                     </div>
@@ -72,6 +73,7 @@
         </div>
         </div>
             
+        <script src="../JS/form.js"></script>
         </body>
 
 </html>

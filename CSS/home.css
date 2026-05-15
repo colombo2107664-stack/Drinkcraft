@@ -92,6 +92,21 @@ a {
     background-color: #FF8A1F;
 }
 
+.messaggio-feed-vuoto {
+    width: 98%;
+    margin: var(--spazio-lg) auto;
+    padding: var(--spazio-lg);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--raggio-lg);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #F2F7FF;
+    text-align: center;
+}
+
+.sentinella-feed {
+    height: 1rem;
+}
+
 .tab{
     background-color: transparent;
     border: none;

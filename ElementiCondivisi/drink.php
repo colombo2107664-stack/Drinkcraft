@@ -91,9 +91,11 @@ class Drink
         }
         $link = htmlspecialchars($pagine['SingoloDrink']);
         $drinkId = htmlspecialchars(strtolower(str_replace(' ', '-', $this->getNome())));
+        $popolarita = (int) $this->getAzioni()[0]['numero'];
+        $recenza = $this->calcolaRecenzaFeed($this->getRecensione()['tempo']);
 
         return '
-        <a href="'. $link .'"><div class="post" data-drink-id="' . $drinkId . '">
+        <a href="'. $link .'" data-feed-drink data-popolarita="' . $popolarita . '" data-recenza="' . $recenza . '"><div class="post" data-drink-id="' . $drinkId . '">
             <div class="sezionesinistra">
                 <h1>' . htmlspecialchars($this->getNome()) . '</h1>
                 <div class="ImgRicetta">
@@ -134,6 +136,26 @@ class Drink
                 </div>
             </div>
         </div></a>';
+    }
+
+    private function calcolaRecenzaFeed(string $tempo): int
+    {
+        if (str_contains($tempo, 'h')) {
+            preg_match('/\d+/', $tempo, $numeri);
+            return 1000 - (int) ($numeri[0] ?? 0);
+        }
+
+        if (str_contains($tempo, 'g')) {
+            preg_match('/\d+/', $tempo, $numeri);
+            return 700 - ((int) ($numeri[0] ?? 0) * 24);
+        }
+
+        if (str_contains($tempo, 'sett')) {
+            preg_match('/\d+/', $tempo, $numeri);
+            return 300 - ((int) ($numeri[0] ?? 0) * 7);
+        }
+
+        return 0;
     }
 
 

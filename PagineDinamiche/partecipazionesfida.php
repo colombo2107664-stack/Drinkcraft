@@ -57,14 +57,69 @@
                 </li>
                 <li class="passo">
                     <h4>Vinci il badge</h4>
-                    <span>I drink più votati riceveranno il badge esclusivo della sfida</span>
+                    <span>I drink piÃ¹ votati riceveranno il badge esclusivo della sfida</span>
                 </li>
             </ol>
 
         <div class="partecipa">
             <h2 class="titolo">Pronto a partecipare?</h2>
             <span>Crea ora il tuo drink e uniisciti alla sfida!</span>
-            <a href="<?= $pagine['creaDrink']?>"><button class="partecipa-bottone">Partecipa alla Sfida</button></a>
+
+            <div class="azioni-partecipazione">
+                <button type="button" class="partecipa-bottone" data-apri-drink-pubblicati>Seleziona drink pubblicato</button>
+                <button type="button" class="partecipa-bottone" data-apri-nuovo-drink>Crea nuovo drink</button>
+            </div>
+
+            <div class="drink-selezionato" data-area-selezione-drink hidden>
+                <img src="../Immagini/no_alcool.png" alt="Drink selezionato" data-immagine-drink-selezionato>
+                <div>
+                    <h3 data-nome-drink-selezionato>Drink selezionato</h3>
+                    <p data-descrizione-drink-selezionato></p>
+                </div>
+            </div>
+
+            <div class="popup-partecipazione" data-popup-drink-pubblicati>
+                <div class="popup-partecipazione-contenuto">
+                    <div class="intestazione-popup-partecipazione">
+                        <h3>Drink pubblicati</h3>
+                        <button type="button" class="chiudi-popup-partecipazione" data-chiudi-popup>Chiudi</button>
+                    </div>
+
+                    <div class="lista-drink-pubblicati" data-lista-drink-pubblicati>
+                        <button type="button" class="drink-pubblicato" data-id-drink="1" data-nome-drink="Primavera Mediterranea" data-descrizione-drink="Drink fresco con agrumi ed erbe aromatiche." data-immagine-drink="../Immagini/PrimaveraMediterraneaBicchiere.png">
+                            <img src="../Immagini/PrimaveraMediterraneaBicchiere.png" alt="Primavera Mediterranea">
+                            <span>Primavera Mediterranea</span>
+                        </button>
+
+                        <button type="button" class="drink-pubblicato" data-id-drink="2" data-nome-drink="Vintage" data-descrizione-drink="Drink elegante dal gusto classico." data-immagine-drink="../Immagini/VintageBicchiere.png">
+                            <img src="../Immagini/VintageBicchiere.png" alt="Vintage">
+                            <span>Vintage</span>
+                        </button>
+
+                        <button type="button" class="drink-pubblicato" data-id-drink="3" data-nome-drink="Virgin Mojito" data-descrizione-drink="Drink analcolico con lime e menta." data-immagine-drink="../Immagini/virginmojito.png">
+                            <img src="../Immagini/virginmojito.png" alt="Virgin Mojito">
+                            <span>Virgin Mojito</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-partecipazione popup-nuovo-drink" data-popup-nuovo-drink>
+                <div class="popup-partecipazione-contenuto popup-nuovo-drink-contenuto">
+                    <div class="intestazione-popup-partecipazione">
+                        <h3>Crea nuovo drink</h3>
+                        <button type="button" class="chiudi-popup-partecipazione" data-chiudi-popup>Chiudi</button>
+                    </div>
+
+                    <?php require __DIR__ . "/../" . $elementiCondivisi["formCreaDrink"]; ?>
+                </div>
+            </div>
         </div>
+        </div>
+        <script src="<?= $JS['PartecipazioneUtili'] ?>"></script>
+        <script src="<?= $JS['PartecipazionePopup'] ?>"></script>
+        <script src="<?= $JS['PartecipazioneSceltaDrink'] ?>"></script>
+        <script src="<?= $JS['PartecipazioneNuovoDrink'] ?>"></script>
+        <script src="<?= $JS['form'] ?>"></script>
     </body>
 </html>

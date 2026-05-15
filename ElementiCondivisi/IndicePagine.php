@@ -21,7 +21,8 @@ $elementiCondivisi = [
     "head"                  => "/ElementiCondivisi/head.php",
     "navbar"                => "/ElementiCondivisi/navbar.php",
     "drink"                 => "/ElementiCondivisi/drink.php",
-    "sfide"                 => "/ElementiCondivisi/sfide.php"
+    "sfide"                 => "/ElementiCondivisi/sfide.php",
+    "formCreaDrink"         => "/ElementiCondivisi/formCreaDrink.php"
 ];
 
 $stile = [
@@ -32,7 +33,7 @@ $stile = [
     "drink"                 => "/CSS/InsideDrink.css",
     "index"                 => "/CSS/home.css",
     "PaginaProfilo"         => "/CSS/PaginaProfilo.css",
-    "partecipazionesfida"   => "/CSS/PartecipazioneSfida.css",
+    "partecipazionesfida"   => "/CSS/partecipazionesfida.css",
     "postSalvati"           => "/CSS/PostSalvati.css",
     "Propostesfide"         => "/CSS/Propostesfide.css",
     "ricerca"               => "/CSS/Ricerca.css",
@@ -69,6 +70,20 @@ $JS = [
     "RicercaToolbar"        => "../JS/ricerca-toolbar.js",
     "RicercaApertura"       => "../JS/ricerca-apertura.js",
     "SfideUtili"            => "../JS/sfide-utili.js",
-    "SfideCountdown"        => "../JS/sfide-countdown.js"
+    "SfideCountdown"        => "../JS/sfide-countdown.js",
+    "FormDrinkUtils"        => "../JS/formDrink-utils.js",
+    "FormDrinkIngredienti"  => "../JS/formDrink-ingredienti.js",
+    "FormDrinkPassaggi"     => "../JS/formDrink-passaggi.js",
+    "FormDrinkValidazione"  => "../JS/formDrink-validazione.js",
+    "FormDrinkSalvataggio"  => "../JS/formDrink-salvataggio.js",
+    "VariazionePrecompilazione" => "../JS/variazioneDrink-precompilazione.js",
+    "FeedUtils"             => "../JS/feed-utils.js",
+    "FeedFiltri"            => "../JS/feed-filtri.js",
+    "FeedScroll"            => "../JS/feed-scroll.js",
+    "FeedOrdinamento"       => "../JS/feed-ordinamento.js",
+    "PartecipazioneUtili"   => "../JS/partecipazione-utils.js",
+    "PartecipazionePopup"   => "../JS/partecipazione-popup.js",
+    "PartecipazioneSceltaDrink"=> "../JS/partecipazione-scelta-drink.js",
+    "PartecipazioneNuovoDrink"=> "../JS/partecipazione-nuovo-drink.js"
 ]
 ?>
