@@ -418,6 +418,30 @@ a {
     gap: 0.5rem;
 }
 
+.popup-nuovo-drink .contenitore-pulsante-invio {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.75rem 0 0 0;
+}
+
+.popup-nuovo-drink .inviato {
+    background-color: #4DD0E1 !important;
+    color: #000 !important;
+    padding: 0.75rem 1.5rem !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    cursor: pointer !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.popup-nuovo-drink .inviato:hover {
+    background-color: #3BB8CD !important;
+    transform: translateY(-2px) !important;
+}
+
 @media (max-width: 48rem) {
     .sfida {
         flex-direction: column;

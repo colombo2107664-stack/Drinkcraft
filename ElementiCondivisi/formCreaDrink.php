@@ -1,4 +1,4 @@
-<form class="posForm" action="/invia" method="post" enctype="multipart/form-data" data-form-drink data-chiave-salvataggio="drinkcraft-crea-drink-temporaneo">
+<form class="posForm" id="formNuovoDrinkSfida" action="/invia" method="post" enctype="multipart/form-data" data-form-drink data-chiave-salvataggio="drinkcraft-partecipazione-drink-temporaneo">
                 
     <div class="campoTesto">
     <label for="nomeDrink"> Nome del tuo Drink</label>
@@ -77,7 +77,8 @@
               
     
     <p class="messaggio-validazione" data-messaggio-validazione hidden></p>
-    <button class="annulla" type="reset" data-bottone-annulla> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo2-icon lucide-undo-2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg> Annulla </button>
-    <button class="inviato" type="submit" data-pulsante-pubblica disabled> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-right-icon lucide-circle-arrow-right"><circle cx="12" cy="12" r="10"/><path d="m12 16 4-4-4-4"/><path d="M8 12h8"/></svg> Pubblica </button>
+    <div class="contenitore-pulsante-invio">
+        <button class="inviato" type="submit" data-pulsante-pubblica disabled> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-right-icon lucide-circle-arrow-right"><circle cx="12" cy="12" r="10"/><path d="m12 16 4-4-4-4"/><path d="M8 12h8"/></svg> Invia </button>
+    </div>
 
 </form>

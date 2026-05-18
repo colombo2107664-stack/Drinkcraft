@@ -56,6 +56,9 @@
   border-radius: var(--raggio-lg);
   max-width: 100%;
 }
+
+
+
 .sezioneForm button{
     display:inline-flex;
     align-items:center;
@@ -74,6 +77,10 @@
     margin-right: var(--spazio-2xs);
 }
 
+.inviato{
+    margin-bottom: var(--spazio-2xl);
+}
+
 .inviato svg{
     margin-left: var(--spazio-xl);
 }
@@ -86,7 +93,8 @@
 .crea{
     padding: var(--spazio-2xl);
     font-size: clamp(0.95rem, 1.2vw, 1rem);
-    padding: var(--spazio-md);
+    
+    
 }
 
 .Crea a:link,
@@ -96,4 +104,69 @@
     color: #4DD0E1;
     text-decoration: none;
     
+}
+
+.contenitore-password { 
+    position: relative; 
+    width: 100%;
+    display:flex;
+    align-items:center;
+    gap: var(--spazio-xs);
+}
+#campoPassword { 
+    flex: 1;
+    width: auto; 
+    padding-right: var(--spazio-md); 
+    box-sizing: border-box; 
+}
+.bottone-mostra-password { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    color: #9CA3AF; 
+    padding: 0 0.75rem; 
+    height: 100%;
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    margin-top:0px !important;
+}
+.bottone-mostra-password svg { 
+    width: 1.2rem; 
+    height: 1.2rem; 
+    display: block; 
+}
+.bottone-mostra-password:hover { 
+    color: #F2F7FF; 
+}
+.bottone-mostra-password.password-visibile { 
+    color: #4DD0E1; 
+}
+
+#campoEmail.email-invalida { 
+    border: 2px solid #EF4444; 
+}
+.messaggio-errore { display:block; 
+    font-size:0.75rem; 
+    color:#EF4444; 
+    margin-top:var(--spazio-xs); 
+    min-height:1rem; }
+
+form[data-messaggio-errore]:not([data-messaggio-errore=""]) { 
+    border: 2px solid #EF4444; 
+}
+form[data-messaggio-errore]:not([data-messaggio-errore=""])::before { 
+    content: attr(data-messaggio-errore); 
+    display:block; padding:var(--spazio-md); 
+    background-color: rgba(239,68,68,0.06); 
+    color:#EF4444; border-radius:var(--raggio-sm); 
+    margin-bottom:var(--spazio-md); 
+    font-size:0.9rem; 
+}
+form[data-messaggio-errore=""]::before { 
+    display:none; 
+}
+#messaggioErroreEmail:empty { 
+    visibility:hidden; 
+    height:1rem; 
 }

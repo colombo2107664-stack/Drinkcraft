@@ -57,7 +57,7 @@
                 </li>
                 <li class="passo">
                     <h4>Vinci il badge</h4>
-                    <span>I drink piÃ¹ votati riceveranno il badge esclusivo della sfida</span>
+                    <span>I drink più votati riceveranno il badge esclusivo della sfida</span>
                 </li>
             </ol>
 
@@ -86,14 +86,14 @@
                     </div>
 
                     <div class="lista-drink-pubblicati" data-lista-drink-pubblicati>
-                        <button type="button" class="drink-pubblicato" data-id-drink="1" data-nome-drink="Primavera Mediterranea" data-descrizione-drink="Drink fresco con agrumi ed erbe aromatiche." data-immagine-drink="../Immagini/PrimaveraMediterraneaBicchiere.png">
-                            <img src="../Immagini/PrimaveraMediterraneaBicchiere.png" alt="Primavera Mediterranea">
-                            <span>Primavera Mediterranea</span>
+                        <button type="button" class="drink-pubblicato" data-id-drink="1" data-nome-drink="negroni" data-descrizione-drink="Drink fresco con agrumi ed erbe aromatiche." data-immagine-drink="../Immagini/negroni.png">
+                            <img src="../Immagini/negroni.png" alt="negroni">
+                            <span>Negroni</span>
                         </button>
 
-                        <button type="button" class="drink-pubblicato" data-id-drink="2" data-nome-drink="Vintage" data-descrizione-drink="Drink elegante dal gusto classico." data-immagine-drink="../Immagini/VintageBicchiere.png">
-                            <img src="../Immagini/VintageBicchiere.png" alt="Vintage">
-                            <span>Vintage</span>
+                        <button type="button" class="drink-pubblicato" data-id-drink="2" data-nome-drink="spritz" data-descrizione-drink="Drink elegante dal gusto classico." data-immagine-drink="../Immagini/aperolspritz.png">
+                            <img src="../Immagini/aperolspritz.png" alt="spritz">
+                            <span>Spritz</span>
                         </button>
 
                         <button type="button" class="drink-pubblicato" data-id-drink="3" data-nome-drink="Virgin Mojito" data-descrizione-drink="Drink analcolico con lime e menta." data-immagine-drink="../Immagini/virginmojito.png">
@@ -116,6 +116,11 @@
             </div>
         </div>
         </div>
+        <script src="<?= $JS['FormDrinkUtils'] ?>"></script>
+        <script src="<?= $JS['FormDrinkIngredienti'] ?>"></script>
+        <script src="<?= $JS['FormDrinkPassaggi'] ?>"></script>
+        <script src="<?= $JS['FormDrinkValidazione'] ?>"></script>
+        <script src="<?= $JS['FormDrinkSalvataggio'] ?>"></script>
         <script src="<?= $JS['PartecipazioneUtili'] ?>"></script>
         <script src="<?= $JS['PartecipazionePopup'] ?>"></script>
         <script src="<?= $JS['PartecipazioneSceltaDrink'] ?>"></script>

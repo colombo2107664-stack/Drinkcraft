@@ -516,27 +516,20 @@ input[type="radio"]:checked + .Opzionebottone{
     margin-right: var(--spazio-2xs);
 }
 
-.annulla{
-    background-color: transparent !important;
-    border: 1px solid var(--bordo-leggero) !important;
-    color: var(--testo-secondario) !important;
-    padding: 0px !important;
-}
-
-.annulla:hover{
-    background-color: rgba(255,255,255,0.06) !important;
-    color: var(--testo-principale) !important;
+.contenitore-pulsante-invio {
+    grid-column: 1 / -1;
+    grid-row: 6;
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--spazio-sm);
 }
 
 .inviato{
     background-color: var(--colore-accento) !important;
     color: var(--testo-principale) !important;
-    padding: 0px !important;
+    padding: 0.75rem 1.5rem !important;
     border: none !important;
-
-    
 }
-
 
 .inviato:hover{
     background-color: var(--colore-accento-hover) !important;
