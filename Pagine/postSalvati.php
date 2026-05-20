@@ -2,11 +2,12 @@
     require __DIR__ ."/../ElementiCondivisi/IndicePagine.php";
     include __DIR__ . "/../" . $elementiCondivisi["drink"];
 
-    $TitoloPagina=" Sfide Drinkcraft";
-    $StilePagina= $stile["Propostesfide"];
 
-    $drinkSfida=[
-        // Negroni
+    $TitoloPagina="Post Salvati";
+    $StilePagina= $stile["postSalvati"];
+
+    $listaSalvati=[
+    // Negroni
     $negroni = new Drink(
                         //NOME
                         'Negroni',
@@ -49,12 +50,6 @@
                                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                                 'numero' => 0,
                                 'label' => ''
-                            ],
-                            //VARIAZIONI
-                            [
-                                'svg' => 'M825.6 460.8c-12.8 0-32 6.4-44.8 12.8l-115.2-108.8c6.4-19.2 12.8-38.4 12.8-57.6 0-64-51.2-121.6-121.6-121.6-64 0-121.6 51.2-121.6 121.6 0 44.8 19.2 76.8 51.2 102.4L409.6 640h-6.4c-25.6 0-51.2 6.4-70.4 19.2L243.2 582.4c6.4-12.8 6.4-19.2 6.4-32 0-51.2-38.4-89.6-89.6-89.6-51.2 0-89.6 38.4-89.6 89.6 0 51.2 38.4 89.6 89.6 89.6 19.2 0 32-6.4 44.8-12.8L294.4 704c-6.4 12.8-12.8 32-12.8 51.2 0 64 51.2 121.6 121.6 121.6 64 0 121.6-51.2 121.6-121.6 0-44.8-19.2-76.8-51.2-102.4l76.8-230.4h6.4c25.6 0 44.8-6.4 64-19.2L736 512c-6.4 12.8-6.4 19.2-6.4 32 0 51.2 38.4 89.6 89.6 89.6 51.2 0 89.6-38.4 89.6-89.6s-32-83.2-83.2-83.2z m-409.6 352c-32 0-57.6-25.6-57.6-57.6s25.6-57.6 57.6-57.6 57.6 25.6 57.6 57.6-25.6 57.6-57.6 57.6z',
-                                'numero' => 12,
-                                'label' => 'varianti'
                             ]
                         ],
                         //DIFFICOLTA
@@ -106,12 +101,6 @@
                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                 'numero' => 17,
                 'label' => ''
-            ],
-            //VARIAZIONI
-            [
-                'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                'numero' => 6,
-                'label' => 'varianti'
             ]
         ],
         //DIFFICOLTA
@@ -161,12 +150,6 @@
                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                 'numero' => 41,
                 'label' => ''
-            ],
-            //VARIAZIONI
-            [
-                'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                'numero' => 15,
-                'label' => 'varianti'
             ]
         ],
         //DIFFICOLTA
@@ -216,12 +199,6 @@
                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                 'numero' => 19,
                 'label' => ''
-            ],
-            //VARIAZIONI
-            [
-                'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                'numero' => 7,
-                'label' => 'varianti'
             ]
         ],
         //DIFFICOLTA
@@ -271,18 +248,11 @@
                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                 'numero' => 47,
                 'label' => ''
-            ],
-            //VARIAZIONI
-            [
-                'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                'numero' => 11,
-                'label' => 'varianti'
             ]
         ],
         //DIFFICOLTA
         'Facile'
     )];
-    
 ?>
 
 <!DOCTYPE html>
@@ -291,26 +261,49 @@
         <body>
             <?php require_once __DIR__ . "/../" . $elementiCondivisi["navbar"];?>
             
-        <div class="introduzione-finale">
-            <div class="badge">
-                <img src="../Immagini/mediterraneo.png" alt="mediterraneo" class="img-badge">
-                <h4 class="titbadge">Maestro Mediterraneo</h4>
+            
+            <a href="<?= $pagine['PaginaProfilo'] ?>"><button class="indietro"><svg class = "icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo2-icon lucide-undo-2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"/></svg>Indietro</button></a>
+
+            <div class="sezioneTitolo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark-icon lucide-bookmark"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"/></svg>
+  
+            <h1>I miei drink salvati</h1>
+            <h4>Trova i tuoi cocktail preferiti sempre a portata di mano</h4>
+            
             </div>
-            <h1>Proposte per: Primavera Mediterranea<h1>
-        </div>
 
-        <?php foreach ($drinkSfida as $singolo): ?>
-                    <?= $singolo->creaPostDrink(); ?>
-                <?php endforeach; ?>
-
-            <div class="introduzione-finale">
-                <img src="../Immagini/sfide.png" alt="trofeo" class="img-badge">
-                <h4>Vuoi partecipare anche tu?</h4>
-                <span>Crea il tuo drink e unisciti alla sfida</span>
-                <a href="<?= $pagine['creaDrink'] ?>"><button class="partecipa-bottone">Partecipa alla Sfida</button></a>
+            <div class="controlli-salvati">
+                <input type="search" data-input-ricerca-salvati placeholder="Cerca drink">
+                <select data-selettore-ordinamento>
+                    <option value="data">Ordina per data</option>
+                    <option value="categoria">Ordina per categoria</option>
+                    <option value="popolarita">Ordina per popolarità</option>
+                </select>
+            </div>
+                        
+            <div class="SezioneDrink" data-lista-salvati>
+                    <?php foreach ($listaSalvati as $indice => $singolo): ?>
+                        <div class="elemento-salvato risultato-drink"
+                            data-risultato-salvato
+                            data-tipo="drink"
+                            data-nome="<?= htmlspecialchars($singolo->getNome()) ?>"
+                            data-categoria="<?= htmlspecialchars($singolo->getTipo()) ?>"
+                            data-popolarita="<?= htmlspecialchars((string) $singolo->getAzioni()[0]['numero']) ?>"
+                            data-data="<?= htmlspecialchars((string) (count($listaSalvati) - $indice)) ?>">
+                            <?= $singolo->drinkProfilo(); ?>
+                            <button class="bottone-rimuovi-salvato" type="button" data-bottone-rimuovi>Rimuovi</button>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <p class="messaggio-vuoto-salvati" data-messaggio-vuoto-salvati>Nessun risultato trovato</p>
 
             </div>
-        <script src="<?= $JS['DrUtili'] ?>"></script>
-        <script src="<?= $JS['DrLike'] ?>"></script>
-    </body>
+            
+            <script src="<?= $JS['SalvatiUtili'] ?>"></script>
+            <script src="<?= $JS['SalvatiRimozione'] ?>"></script>
+            <script src="<?= $JS['SalvatiOrdinamento'] ?>"></script>
+            <script src="<?= $JS['SalvatiRicerca'] ?>"></script>
+            
+        </body>
+
 </html>

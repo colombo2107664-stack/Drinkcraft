@@ -52,12 +52,6 @@
                                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                                 'numero' => 0,
                                 'label' => ''
-                            ],
-                            //VARIAZIONI
-                            [
-                                'svg' => 'M825.6 460.8c-12.8 0-32 6.4-44.8 12.8l-115.2-108.8c6.4-19.2 12.8-38.4 12.8-57.6 0-64-51.2-121.6-121.6-121.6-64 0-121.6 51.2-121.6 121.6 0 44.8 19.2 76.8 51.2 102.4L409.6 640h-6.4c-25.6 0-51.2 6.4-70.4 19.2L243.2 582.4c6.4-12.8 6.4-19.2 6.4-32 0-51.2-38.4-89.6-89.6-89.6-51.2 0-89.6 38.4-89.6 89.6 0 51.2 38.4 89.6 89.6 89.6 19.2 0 32-6.4 44.8-12.8L294.4 704c-6.4 12.8-12.8 32-12.8 51.2 0 64 51.2 121.6 121.6 121.6 64 0 121.6-51.2 121.6-121.6 0-44.8-19.2-76.8-51.2-102.4l76.8-230.4h6.4c25.6 0 44.8-6.4 64-19.2L736 512c-6.4 12.8-6.4 19.2-6.4 32 0 51.2 38.4 89.6 89.6 89.6 51.2 0 89.6-38.4 89.6-89.6s-32-83.2-83.2-83.2z m-409.6 352c-32 0-57.6-25.6-57.6-57.6s25.6-57.6 57.6-57.6 57.6 25.6 57.6 57.6-25.6 57.6-57.6 57.6z',
-                                'numero' => 12,
-                                'label' => 'varianti'
                             ]
                         ],
                         //DIFFICOLTA
@@ -109,12 +103,6 @@
                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                 'numero' => 17,
                 'label' => ''
-            ],
-            //VARIAZIONI
-            [
-                'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                'numero' => 6,
-                'label' => 'varianti'
             ]
         ],
         //DIFFICOLTA
@@ -164,12 +152,6 @@
                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                 'numero' => 41,
                 'label' => ''
-            ],
-            //VARIAZIONI
-            [
-                'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                'numero' => 15,
-                'label' => 'varianti'
             ]
         ],
         //DIFFICOLTA
@@ -219,12 +201,6 @@
                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                 'numero' => 19,
                 'label' => ''
-            ],
-            //VARIAZIONI
-            [
-                'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                'numero' => 7,
-                'label' => 'varianti'
             ]
         ],
         //DIFFICOLTA
@@ -274,12 +250,6 @@
                 'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                 'numero' => 47,
                 'label' => ''
-            ],
-            //VARIAZIONI
-            [
-                'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                'numero' => 11,
-                'label' => 'varianti'
             ]
         ],
         //DIFFICOLTA
@@ -387,7 +357,6 @@
                     <div class="nomeETag">
                     <div class="riga-nome-profilo">
                         <p class="nomeUtente" data-anteprima-nome>Lincoln Barrows</p>
-                        <button class="bottone-follow" type="button" data-bottone-follow aria-pressed="false">Segui</button>
                     </div>
                     <p class="tagProfilo" data-anteprima-username> @viva_le_evasioni </p>
                     </div>

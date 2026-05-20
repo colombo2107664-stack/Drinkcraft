@@ -75,17 +75,9 @@
                         </svg>
                         <span>17</span>
                     </div>
-                    <div class="azione">
-                        <svg viewBox="0 0 24 24" class="icon">
-                            <path d="M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z"/>
-                        </svg>
-                        <span>6 varianti</span>
-                    </div>
-                    
                 </div>
 
                 <div class="bottoni">
-                    <a href="<?= $pagine['VariazioneDrink'] ?>"><button class="creavariante">Crea una variante</button></a>
                     <button class="salva" type="button" data-bottone-salva data-url="/ApiDrink/salva-drink.php" aria-pressed="false">Salva</button>
                 </div>
             </div>

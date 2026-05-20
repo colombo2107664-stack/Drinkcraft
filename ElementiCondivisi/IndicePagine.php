@@ -1,20 +1,20 @@
 <?php
 
 $pagine = [
-    "AccediProfilo"         => "/PagineDinamiche/AccediProfilo.php",
-    "creaDrink"             => "/PagineDinamiche/creaDrink.php",
-    "CreaProfilo"           => "/PagineDinamiche/CreaProfilo.php",
-    "Creaprofilo2"          => "/PagineDinamiche/Creaprofilo2.php",
-    "SingoloDrink"          => "/PagineDinamiche/SingoloDrink.php",
-    "index"                 => "/PagineDinamiche/index.php",
-    "IndicePagine"          => "/PagineDinamiche/IndicePagine.php",
-    "PaginaProfilo"         => "/PagineDinamiche/PaginaProfilo.php",
-    "partecipazionesfida"   => "/PagineDinamiche/partecipazionesfida.php",
-    "postSalvati"           => "/PagineDinamiche/postSalvati.php",
-    "Propostesfide"         => "/PagineDinamiche/Propostesfide.php",
-    "ricerca"               => "/PagineDinamiche/ricerca.php",
-    "sfideSettimanali"      => "/PagineDinamiche/sfideSettimanali.php",
-    "VariazioneDrink"       => "/PagineDinamiche/VariazioneDrink.php",
+    "AccediProfilo"         => "/Pagine/AccediProfilo.php",
+    "creaDrink"             => "/Pagine/creaDrink.php",
+    "CreaProfilo"           => "/Pagine/CreaProfilo.php",
+    "Creaprofilo2"          => "/Pagine/Creaprofilo2.php",
+    "SingoloDrink"          => "/Pagine/SingoloDrink.php",
+    "index"                 => "/Pagine/index.php",
+    "IndicePagine"          => "/Pagine/IndicePagine.php",
+    "PaginaProfilo"         => "/Pagine/PaginaProfilo.php",
+    "partecipazionesfida"   => "/Pagine/partecipazionesfida.php",
+    "postSalvati"           => "/Pagine/postSalvati.php",
+    "Propostesfide"         => "/Pagine/Propostesfide.php",
+    "ricerca"               => "/Pagine/ricerca.php",
+    "sfideSettimanali"      => "/Pagine/sfideSettimanali.php",
+    "ProfiloPersonale"      => "/Pagine/PaginaProfiloPersonale.php"
 ];
 
 $elementiCondivisi = [
@@ -33,12 +33,12 @@ $stile = [
     "drink"                 => "/CSS/InsideDrink.css",
     "index"                 => "/CSS/home.css",
     "PaginaProfilo"         => "/CSS/PaginaProfilo.css",
+    "ProfiloPersonale"      => "/CSS/ProfiloPersonale.css",
     "partecipazionesfida"   => "/CSS/partecipazionesfida.css",
     "postSalvati"           => "/CSS/PostSalvati.css",
     "Propostesfide"         => "/CSS/Propostesfide.css",
     "ricerca"               => "/CSS/Ricerca.css",
-    "sfideSettimanali"      => "/CSS/Sfidesettimanali.css",
-    "VariazioneDrink"       => "/CSS/variazioneDrink.css"
+    "sfideSettimanali"      => "/CSS/Sfidesettimanali.css"
 ];
 
 
@@ -76,7 +76,6 @@ $JS = [
     "FormDrinkPassaggi"     => "../JS/form/formDrink-passaggi.js",
     "FormDrinkValidazione"  => "../JS/form/formDrink-validazione.js",
     "FormDrinkSalvataggio"  => "../JS/form/formDrink-salvataggio.js",
-    "VariazionePrecompilazione" => "../JS/variazione drink/variazioneDrink-precompilazione.js",
     "FeedUtils"             => "../JS/feed/feed-utils.js",
     "FeedFiltri"            => "../JS/feed/feed-filtri.js",
     "FeedScroll"            => "../JS/feed/feed-scroll.js",
@@ -90,4 +89,15 @@ $JS = [
     "AccediValidazione"     => "../JS/Accedi/accedi-validazione.js",
     "AccediErrori"          => "../JS/Accedi/accedi-errori.js"
 ];
+
+
+
+$backend = [
+    "session"               => "../backend/config/session.php",
+    "db"                    => "../backend/config/db.php",
+    "database"              => "../backend/database/schema.sql"
+];
+
+require_once __DIR__ . "/../" . $backend["session"];
+require_once __DIR__ . "/../" . $backend["db"];
 ?>

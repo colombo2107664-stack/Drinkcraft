@@ -49,12 +49,6 @@
                                             'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                                             'numero' => 0,
                                             'label' => ''
-                                        ],
-                                        //VARIAZIONI
-                                        [
-                                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                                            'numero' => 12,
-                                            'label' => 'varianti'
                                         ]
                                     ],
                                     //DIFFICOLTA
@@ -106,12 +100,6 @@
                             'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                             'numero' => 17,
                             'label' => ''
-                        ],
-                        //VARIAZIONI
-                        [
-                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                            'numero' => 6,
-                            'label' => 'varianti'
                         ]
                     ],
                     //DIFFICOLTA
@@ -161,12 +149,6 @@
                             'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                             'numero' => 41,
                             'label' => ''
-                        ],
-                        //VARIAZIONI
-                        [
-                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                            'numero' => 15,
-                            'label' => 'varianti'
                         ]
                     ],
                     //DIFFICOLTA
@@ -216,12 +198,6 @@
                             'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                             'numero' => 19,
                             'label' => ''
-                        ],
-                        //VARIAZIONI
-                        [
-                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                            'numero' => 7,
-                            'label' => 'varianti'
                         ]
                     ],
                     //DIFFICOLTA
@@ -271,12 +247,6 @@
                             'svg' => 'M21 6h-18v12h4v4l4-4h10z',
                             'numero' => 47,
                             'label' => ''
-                        ],
-                        //VARIAZIONI
-                        [
-                            'svg' => 'M12 2l4 4-4 4-4-4zM4 10h16v4H4zM12 22l-4-4 4-4 4 4z',
-                            'numero' => 11,
-                            'label' => 'varianti'
                         ]
                     ],
                     //DIFFICOLTA
